@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+:root {
+  --ivory: #f7f3eb;
+  --ivory-deep: #efe8dc;
+  --navy: #1b2a41;
+  --navy-soft: #2c3e55;
+  --forest: #2f5d4a;
+  --forest-deep: #244a3b;
+  --ember: #c45c4a;
+  --mist: #d9e2dc;
+  --ink-muted: #5a6574;
+  --background: var(--ivory);
+  --foreground: var(--navy);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-ivory: var(--ivory);
+  --color-ivory-deep: var(--ivory-deep);
+  --color-navy: var(--navy);
+  --color-navy-soft: var(--navy-soft);
+  --color-forest: var(--forest);
+  --color-forest-deep: var(--forest-deep);
+  --color-ember: var(--ember);
+  --color-mist: var(--mist);
+  --color-ink-muted: var(--ink-muted);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--forest) 28%, white);
+  color: var(--navy);
+}
+
+.atmosphere {
+  background:
+    radial-gradient(ellipse 80% 50% at 10% -10%, color-mix(in oklab, var(--mist) 70%, transparent), transparent 55%),
+    radial-gradient(ellipse 60% 40% at 95% 5%, color-mix(in oklab, var(--ivory-deep) 90%, transparent), transparent 50%),
+    linear-gradient(180deg, var(--ivory) 0%, #f3eee4 100%);
+}
+
+.network-fade {
+  background-image:
+    radial-gradient(circle at 20% 40%, color-mix(in oklab, var(--forest) 18%, transparent) 0 1.5px, transparent 2px),
+    radial-gradient(circle at 70% 30%, color-mix(in oklab, var(--ember) 16%, transparent) 0 1.5px, transparent 2px),
+    radial-gradient(circle at 55% 70%, color-mix(in oklab, var(--navy) 12%, transparent) 0 1.5px, transparent 2px);
+  background-size: 100% 100%;
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes soft-draw {
+  from {
+    stroke-dashoffset: 120;
+    opacity: 0;
+  }
+  to {
+    stroke-dashoffset: 0;
+    opacity: 0.45;
+  }
+}
+
+.animate-rise {
+  animation: rise-in 0.9s ease-out both;
+}
+
+.animate-rise-delay {
+  animation: rise-in 1s ease-out 0.15s both;
+}
+
+.animate-rise-late {
+  animation: rise-in 1.05s ease-out 0.3s both;
+}
+
+.connection-line {
+  stroke-dasharray: 120;
+  animation: soft-draw 1.6s ease-out 0.4s both;
+}

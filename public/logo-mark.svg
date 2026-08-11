@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-6 -6 76 76" fill="none" aria-hidden="true" overflow="visible">
+  <path d="M 19.517 24.200 A 14.720 14.720 0 0 1 31.486 17.289" stroke="#F0C020" stroke-width="7.552" stroke-linecap="round"/>
+  <circle cx="21.440" cy="13.710" r="3.712" fill="#F0C020"/>
+  <path d="M 32.514 17.289 A 14.720 14.720 0 0 1 44.483 24.200" stroke="#D02820" stroke-width="7.552" stroke-linecap="round"/>
+  <circle cx="42.560" cy="13.710" r="3.712" fill="#D02820"/>
+  <path d="M 44.997 25.089 A 14.720 14.720 0 0 1 44.997 38.911" stroke="#5850A0" stroke-width="7.552" stroke-linecap="round"/>
+  <circle cx="53.120" cy="32.000" r="3.712" fill="#5850A0"/>
+  <path d="M 44.483 39.800 A 14.720 14.720 0 0 1 32.514 46.711" stroke="#ED9700" stroke-width="7.552" stroke-linecap="round"/>
+  <circle cx="42.560" cy="50.290" r="3.712" fill="#ED9700"/>
+  <path d="M 31.486 46.711 A 14.720 14.720 0 0 1 19.517 39.800" stroke="#488848" stroke-width="7.552" stroke-linecap="round"/>
+  <circle cx="21.440" cy="50.290" r="3.712" fill="#488848"/>
+  <path d="M 19.003 38.911 A 14.720 14.720 0 0 1 19.003 25.089" stroke="#3858B0" stroke-width="7.552" stroke-linecap="round"/>
+  <circle cx="10.880" cy="32.000" r="3.712" fill="#3858B0"/>
+</svg>
