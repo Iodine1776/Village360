@@ -17,7 +17,9 @@ const columns = [
     links: [
       { href: "/join", label: "Join the Movement" },
       { href: "/bring-village360-here", label: "Bring Village360 Here" },
+      { href: "/launch-a-village", label: "Launch a Village" },
       { href: "/resources", label: "Resources" },
+      { href: "/contact", label: "Contact" },
     ],
   },
 ];

@@ -13,9 +13,9 @@ const pathways = [
     audience: "Community leaders",
     title: "Build with us",
     body: "Pastors, nonprofit directors, school and court partners, and coalition builders who want coordinated support instead of another disconnected program.",
-    next: "Explore the Model, then begin a readiness conversation. Submission starts discernment—it does not guarantee a launch.",
+    next: "Explore the Model, learn what a launch includes, then begin a readiness conversation. Submission starts discernment—it does not guarantee a launch.",
     primary: { href: "/bring-village360-here", label: "Bring Village360 Here" },
-    secondary: { href: "/the-model", label: "Explore the Model" },
+    secondary: { href: "/launch-a-village", label: "What a launch includes" },
   },
   {
     id: "partners",

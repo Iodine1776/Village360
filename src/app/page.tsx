@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { KIT_PDF_HREF } from "@/lib/site";
 
 const pathways = [
   {
@@ -205,12 +206,13 @@ export default function HomePage() {
             >
               Schedule a Conversation
             </Link>
-            <Link
-              href="/resources"
+            <a
+              href={KIT_PDF_HREF}
+              download
               className="inline-flex items-center justify-center rounded-md border border-navy/20 px-5 py-3 text-base font-medium text-navy transition-colors hover:border-forest/40"
             >
               Download the Mini Village Kit
-            </Link>
+            </a>
           </div>
         </div>
       </section>

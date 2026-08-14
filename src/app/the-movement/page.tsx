@@ -79,8 +79,8 @@ const waysToAct = [
   {
     title: "Launch",
     body: "Bring the Village360 Model to your church, school, court, nonprofit, or coalition.",
-    href: "/bring-village360-here",
-    label: "Bring Village360 Here",
+    href: "/launch-a-village",
+    label: "Learn about launching",
   },
 ];
 
