@@ -22,6 +22,10 @@ export const metadata: Metadata = {
   description:
     "Village360 is a growing movement of communities choosing coordinated, relationship-centered support before families reach crisis.",
   metadataBase: new URL("https://joinvillage360.com"),
+  icons: {
+    icon: "/icon.png",
+    apple: "/icon.png",
+  },
 };
 
 export default function RootLayout({

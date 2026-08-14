@@ -13,8 +13,8 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Design notes
 
-- Brand mark is a clean SVG six-person ring in `Logo.tsx` (also `public/logo-mark.svg` / `.png`); mockup rasters clip the left blue head against the page edge, so vectors are the source of truth. Wordmark is VILLAGE (navy) + 360 (ember). Prefer an official vector export from your wife when available.
-- Full lockup also saved at `public/logo.png` for reference/export.
+- Official lockup is `public/logo.png` (six heart figures + VILLAGE360 wordmark). Header and footer render this file once via `Logo.tsx` — do not add a second wordmark.
+- Isolated mark is `public/icon.png` (favicon / apple-touch). Do not use reconstructed SVG generators.
 - Palette: warm ivory, forest green, navy; keep layouts quiet and uncluttered
 - Mockup stats, partner logos, and photos are **not** treated as accurate content
 - Interior routes are intentional placeholders until confirmed copy arrives

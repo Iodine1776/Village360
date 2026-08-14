@@ -12,8 +12,8 @@ const nav = [
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-40 border-b border-navy/8 bg-ivory/90 backdrop-blur-md">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3.5 sm:px-8">
+    <header className="sticky top-0 z-40 overflow-visible border-b border-navy/8 bg-ivory/90 backdrop-blur-md">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 overflow-visible px-5 py-2.5 sm:px-8">
         <Logo />
 
         <nav
