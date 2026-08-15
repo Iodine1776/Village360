@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { BrandDots } from "@/components/BrandDots";
-import { CoordinationGraphic } from "@/components/CoordinationGraphic";
 import { ModelTeaser } from "@/components/ModelTeaser";
 import { KIT_PDF_HREF } from "@/lib/site";
 import { NEED_SOURCES, NEED_STATS } from "@/lib/need-stats";
@@ -54,7 +53,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 2. Coordination / star funnel */}
+      {/* 2. Coordination */}
       <section className="relative overflow-hidden bg-ivory">
         <div className="pointer-events-none absolute top-16 right-10 hidden lg:block" aria-hidden>
           <BrandDots orientation="horizontal" />
@@ -73,8 +72,15 @@ export default function HomePage() {
             work as one village—with the family at the center, not lost between
             systems.
           </p>
-          <div className="mt-12 rounded-2xl border border-navy/8 bg-ivory-deep/40 px-5 py-10 sm:px-8 sm:py-12">
-            <CoordinationGraphic />
+          <div className="mt-12">
+            <Image
+              src="/home-graphic-1.png"
+              alt="Community partners—schools, faith communities, nonprofits, courts, local agencies, health providers, and businesses—coordinating around the family at the center."
+              width={2048}
+              height={1318}
+              className="mx-auto h-auto w-full max-w-5xl object-contain"
+              sizes="(min-width: 1024px) 64rem, 100vw"
+            />
           </div>
         </div>
       </section>
