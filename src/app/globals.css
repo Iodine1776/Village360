@@ -10,6 +10,12 @@
   --ember: #c45c4a;
   --mist: #d9e2dc;
   --ink-muted: #5a6574;
+  --brand-yellow: #f0e448;
+  --brand-red: #d81818;
+  --brand-purple: #6c48a8;
+  --brand-orange: #f09000;
+  --brand-green: #549c3c;
+  --brand-blue: #3c48cc;
   --background: var(--ivory);
   --foreground: var(--navy);
 }
@@ -26,6 +32,12 @@
   --color-ember: var(--ember);
   --color-mist: var(--mist);
   --color-ink-muted: var(--ink-muted);
+  --color-brand-yellow: var(--brand-yellow);
+  --color-brand-red: var(--brand-red);
+  --color-brand-purple: var(--brand-purple);
+  --color-brand-green: var(--brand-green);
+  --color-brand-orange: var(--brand-orange);
+  --color-brand-blue: var(--brand-blue);
   --font-sans: var(--font-body);
   --font-display: var(--font-display);
 }

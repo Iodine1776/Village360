@@ -1,218 +1,269 @@
+import Image from "next/image";
 import Link from "next/link";
+import { BrandDots } from "@/components/BrandDots";
+import { CoordinationGraphic } from "@/components/CoordinationGraphic";
+import { ModelTeaser } from "@/components/ModelTeaser";
 import { KIT_PDF_HREF } from "@/lib/site";
-
-const pathways = [
-  {
-    audience: "Community leaders",
-    title: "Build the Movement",
-    body: "Care feels disconnected and reactive. Bring Village360 structure, training, and tools to your church, school, court, nonprofit, or coalition.",
-    href: "/bring-village360-here",
-    label: "Bring Village360 Here",
-  },
-  {
-    audience: "Funders & partners",
-    title: "Strengthen the Movement",
-    body: "You need a credible, scalable prevention story—not inflated claims. Partner, sponsor, or contribute expertise so communities launch with integrity.",
-    href: "/join#partners",
-    label: "Explore Partnerships",
-  },
-  {
-    audience: "Families & volunteers",
-    title: "Join the Movement",
-    body: "Feel isolated, or ready to help with clear roles? Find support, volunteer locally, or stay connected—without a sales funnel.",
-    href: "/join",
-    label: "Find Your Place",
-  },
-];
-
-const stages = [
-  {
-    name: "Listen & Assess",
-    detail: "Understand families, partners, gaps, and local capacity before designing solutions.",
-  },
-  {
-    name: "Equip Leaders",
-    detail: "Train coaches, volunteers, and partner organizations to work with shared clarity.",
-  },
-  {
-    name: "Connect the Village",
-    detail: "Create coordinated pathways of practical, emotional, and relational support.",
-  },
-  {
-    name: "Measure & Multiply",
-    detail: "Track what matters, learn together, and help the next community begin well.",
-  },
-];
+import { NEED_SOURCES, NEED_STATS } from "@/lib/need-stats";
 
 export default function HomePage() {
   return (
-    <div className="atmosphere relative overflow-hidden">
-      <div className="network-fade absolute inset-0" aria-hidden />
-
-      {/* Hero — one composition: brand, headline, support, CTAs */}
-      <section className="relative mx-auto max-w-6xl px-5 pt-16 pb-20 sm:px-8 sm:pt-24 sm:pb-28">
-        <svg
-          className="pointer-events-none absolute top-10 right-0 hidden h-64 w-72 text-forest/25 lg:block"
-          viewBox="0 0 280 240"
-          fill="none"
+    <div>
+      {/* 1. Hero */}
+      <section className="relative isolate min-h-[32rem] overflow-hidden sm:min-h-[38rem] lg:min-h-[44rem]">
+        <Image
+          src="/hero.png"
+          alt="A family and neighbors gathered outdoors in warm evening light"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-[72%_center]"
+        />
+        <div
+          className="absolute inset-0 bg-gradient-to-r from-navy/82 via-navy/55 to-navy/10 sm:via-navy/48 sm:to-transparent"
           aria-hidden
-        >
-          <circle cx="210" cy="48" r="4" fill="currentColor" className="text-ember/50" />
-          <circle cx="120" cy="90" r="3.5" fill="currentColor" className="text-forest/40" />
-          <circle cx="180" cy="150" r="3" fill="currentColor" className="text-navy/30" />
-          <path
-            className="connection-line"
-            d="M210 48 C170 70, 140 70, 120 90 C150 115, 170 130, 180 150"
-            stroke="currentColor"
-            strokeWidth="1.25"
-          />
-        </svg>
+        />
+        <BrandDots className="absolute top-1/2 left-4 z-10 hidden -translate-y-1/2 sm:left-6 lg:flex" />
 
-        <p className="animate-rise mb-5 text-xs font-semibold tracking-[0.2em] text-forest uppercase">
-          The Village360 Movement
-        </p>
-        <h1 className="animate-rise font-display max-w-3xl text-4xl leading-[1.12] font-medium tracking-tight text-navy sm:text-5xl lg:text-[3.35rem]">
-          Every family needs a village.{" "}
-          <span className="text-forest">
-            We&apos;re building a movement to help communities become one.
-          </span>
-        </h1>
-        <p className="animate-rise-delay mt-6 max-w-2xl text-lg leading-relaxed text-ink-muted sm:text-xl">
-          Village360 equips churches, nonprofits, schools, courts, and local leaders
-          with the structure, training, and tools to surround families before crisis
-          becomes separation.
-        </p>
-        <div className="animate-rise-late mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
-          <Link
-            href="/join"
-            className="inline-flex items-center justify-center rounded-md bg-forest px-5 py-3 text-base font-medium text-ivory transition-colors hover:bg-forest-deep"
-          >
-            Join the Movement
-          </Link>
-          <Link
-            href="/bring-village360-here"
-            className="inline-flex items-center justify-center rounded-md border border-navy/20 bg-ivory/60 px-5 py-3 text-base font-medium text-navy transition-colors hover:border-forest/40 hover:bg-ivory"
-          >
-            Bring Village360 Here
-          </Link>
-          <Link
-            href="/the-model"
-            className="inline-flex items-center justify-center px-2 py-3 text-base text-ink-muted underline-offset-4 transition-colors hover:text-forest hover:underline sm:ml-1"
-          >
-            Explore the Model
-          </Link>
+        <div className="relative z-10 mx-auto flex min-h-[32rem] max-w-6xl flex-col justify-center px-5 py-20 sm:min-h-[38rem] sm:px-8 lg:min-h-[44rem]">
+          <p className="animate-rise mb-5 text-xs font-semibold tracking-[0.2em] text-mist uppercase">
+            The Village360 Movement
+          </p>
+          <h1 className="animate-rise font-display max-w-xl text-4xl leading-[1.12] font-medium tracking-tight text-ivory sm:text-5xl lg:text-[3.35rem]">
+            Every family <span className="italic">needs</span> a village.
+          </h1>
+          <p className="animate-rise-delay mt-6 max-w-md text-lg leading-relaxed text-ivory/88 sm:text-xl">
+            Village360 equips communities with structure, tools, and
+            relationships to support vulnerable families before crisis—so every
+            child has what they need to thrive.
+          </p>
+          <div className="animate-rise-late mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <Link
+              href="/join"
+              className="inline-flex items-center justify-center rounded-md bg-forest px-5 py-3 text-base font-medium text-ivory transition-colors hover:bg-forest-deep"
+            >
+              Join the Movement
+            </Link>
+            <Link
+              href="/the-model"
+              className="inline-flex items-center justify-center rounded-md border border-ivory/45 bg-ivory/10 px-5 py-3 text-base font-medium text-ivory backdrop-blur-sm transition-colors hover:border-ivory hover:bg-ivory/20"
+            >
+              Explore the Model
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* Declaration */}
+      {/* 2. Coordination / star funnel */}
+      <section className="relative overflow-hidden bg-ivory">
+        <div className="pointer-events-none absolute top-16 right-10 hidden lg:block" aria-hidden>
+          <BrandDots orientation="horizontal" />
+        </div>
+        <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
+          <p className="mb-3 text-xs font-semibold tracking-[0.18em] text-forest uppercase">
+            Coordination
+          </p>
+          <h2 className="font-display max-w-3xl text-3xl text-navy sm:text-4xl">
+            Most communities don&apos;t lack caring people. They lack
+            coordination.
+          </h2>
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink-muted sm:text-lg">
+            Schools, congregations, nonprofits, courts, agencies, health
+            providers, and businesses already show up. Village360 helps them
+            work as one village—with the family at the center, not lost between
+            systems.
+          </p>
+          <div className="mt-12 rounded-2xl border border-navy/8 bg-ivory-deep/40 px-5 py-10 sm:px-8 sm:py-12">
+            <CoordinationGraphic />
+          </div>
+        </div>
+      </section>
+
+      {/* 3. Short model teaser */}
       <section className="relative border-y border-navy/8 bg-ivory-deep/50">
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
-          <p className="font-display max-w-3xl text-2xl leading-snug text-navy sm:text-3xl">
-            We believe the foster care crisis cannot be answered by the foster care
-            system alone.
-          </p>
-          <p className="mt-5 max-w-2xl text-base leading-relaxed text-ink-muted sm:text-lg">
-            Families do not live inside systems. They live inside communities.
-            Village360 helps those communities recognize their shared
-            responsibility—and build the structure to carry it together.
-          </p>
+          <ModelTeaser />
         </div>
       </section>
 
-      {/* Pathways — one job: help visitors choose a door */}
-      <section className="relative mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
-        <p className="mb-3 text-xs font-semibold tracking-[0.18em] text-forest uppercase">
-          Find your place
-        </p>
-        <h2 className="font-display max-w-xl text-3xl text-navy sm:text-4xl">
-          Three ways to begin.
-        </h2>
-        <ul className="mt-10 divide-y divide-navy/10 border-y border-navy/10">
-          {pathways.map((item) => (
-            <li
-              key={item.title}
-              className="grid gap-3 py-7 sm:grid-cols-[minmax(0,0.9fr)_minmax(0,1.3fr)_auto] sm:items-center sm:gap-8"
-            >
-              <div>
-                <p className="mb-1 text-xs font-semibold tracking-[0.14em] text-forest/80 uppercase">
-                  {item.audience}
-                </p>
-                <h3 className="font-display text-xl text-navy">{item.title}</h3>
-              </div>
-              <p className="text-base leading-relaxed text-ink-muted">{item.body}</p>
-              <Link
-                href={item.href}
-                className="text-sm font-medium text-forest transition-colors hover:text-forest-deep sm:justify-self-end"
-              >
-                {item.label} →
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      {/* Model bridge — quiet process, no dashboard clutter */}
-      <section className="relative bg-navy text-ivory">
+      {/* 4. Impact / needs */}
+      <section className="relative bg-ivory">
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
-          <p className="mb-3 text-xs font-semibold tracking-[0.18em] text-mist/80 uppercase">
-            The model behind the movement
+          <p className="mb-3 text-xs font-semibold tracking-[0.18em] text-forest uppercase">
+            Why a village matters
           </p>
-          <h2 className="font-display max-w-2xl text-3xl sm:text-4xl">
-            A movement needs more than momentum. It needs a way to work.
-          </h2>
-          <p className="mt-4 max-w-2xl text-base leading-relaxed text-ivory/70">
-            The Village360 Model turns shared concern into coordinated local
-            action—aligning people, programs, relationships, and infrastructure
-            around families.
+          <blockquote className="font-display max-w-3xl text-3xl leading-snug text-navy sm:text-4xl">
+            “Good intentions matter. Measured implementation makes them
+            sustainable.”
+          </blockquote>
+          <Link
+            href="/impact"
+            className="mt-5 inline-flex text-sm font-medium text-forest transition-colors hover:text-forest-deep"
+          >
+            How we intend to measure impact →
+          </Link>
+
+          <p className="mt-12 max-w-2xl text-base leading-relaxed text-ink-muted">
+            These are need figures—not Village360 results. We will not invent
+            outcome dashboards. The scale of the work is already large enough.
           </p>
 
-          <ol className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {stages.map((stage, index) => (
-              <li key={stage.name} className="relative">
-                <span className="text-xs font-semibold tracking-[0.16em] text-mist/60 uppercase">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <h3 className="mt-2 font-display text-xl">{stage.name}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-ivory/65">
-                  {stage.detail}
-                </p>
+          <ul className="mt-10 grid gap-5 sm:grid-cols-2">
+            {NEED_STATS.map((stat) => {
+              const sources = stat.sourceIds
+                .map((id) => NEED_SOURCES.find((source) => source.id === id))
+                .filter((source) => source != null);
+
+              return (
+                <li
+                  key={stat.id}
+                  className="relative overflow-hidden rounded-xl border border-navy/8 bg-ivory-deep/50 p-6"
+                >
+                  <span
+                    className="absolute top-0 left-0 h-full w-1.5"
+                    style={{ backgroundColor: stat.color }}
+                    aria-hidden
+                  />
+                  <p className="text-xs font-semibold tracking-[0.16em] text-ink-muted uppercase">
+                    {stat.kicker}
+                  </p>
+                  <p className="font-display mt-3 text-4xl tracking-tight text-navy sm:text-5xl">
+                    {stat.display}
+                    {"secondary" in stat && stat.secondary ? (
+                      <span className="mt-1 block text-2xl text-navy-soft sm:text-3xl">
+                        {stat.secondary.display}
+                        <span className="ml-2 text-base font-sans font-normal text-ink-muted">
+                          {stat.secondary.detail}
+                        </span>
+                      </span>
+                    ) : null}
+                  </p>
+                  <p className="mt-3 text-sm leading-relaxed text-ink-muted">
+                    {stat.detail}
+                  </p>
+                  <p className="mt-3 text-xs text-ink-muted/80">
+                    Source{sources.length > 1 ? "s" : ""}:{" "}
+                    {sources.map((source, index) => (
+                      <span key={source.id}>
+                        {index > 0 ? "; " : null}
+                        <a
+                          href={source.href}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="underline-offset-2 hover:text-forest hover:underline"
+                        >
+                          {source.shortLabel}
+                        </a>
+                      </span>
+                    ))}
+                  </p>
+                </li>
+              );
+            })}
+          </ul>
+
+          <p className="mt-8 max-w-3xl text-sm leading-relaxed text-ink-muted">
+            Official counts understate the need. Informal kinship, unreported
+            harm, and unstable homes that never open a child-welfare case are
+            largely missing from these numbers.
+          </p>
+
+          <ol className="mt-6 max-w-3xl space-y-2 text-xs leading-relaxed text-ink-muted/85">
+            {NEED_SOURCES.map((source, index) => (
+              <li key={source.id}>
+                <span className="font-medium text-navy-soft">{index + 1}. </span>
+                <a
+                  href={source.href}
+                  className="underline-offset-2 hover:text-forest hover:underline"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {source.label}
+                </a>
               </li>
             ))}
           </ol>
-
-          <Link
-            href="/the-model"
-            className="mt-10 inline-flex text-sm font-medium text-mist transition-colors hover:text-ivory"
-          >
-            Learn how the model works →
-          </Link>
         </div>
       </section>
 
-      {/* Closing CTA */}
-      <section className="relative mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-24">
-        <div className="max-w-2xl">
-          <h2 className="font-display text-3xl text-navy sm:text-4xl">
-            What could a stronger village make possible in your community?
-          </h2>
-          <p className="mt-4 text-base leading-relaxed text-ink-muted sm:text-lg">
-            Start with a conversation, a readiness check, or a free starter kit.
-            You do not need a finished village—only a responsible place to begin.
+      {/* 5. Snowball */}
+      <section className="relative overflow-hidden bg-navy text-ivory">
+        <BrandDots
+          orientation="horizontal"
+          className="absolute top-8 right-8 hidden opacity-80 lg:flex"
+        />
+        <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
+          <p className="mb-3 text-xs font-semibold tracking-[0.18em] text-mist/80 uppercase">
+            The snowball
           </p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Link
-              href="/bring-village360-here"
-              className="inline-flex items-center justify-center rounded-md bg-forest px-5 py-3 text-base font-medium text-ivory transition-colors hover:bg-forest-deep"
-            >
-              Schedule a Conversation
-            </Link>
-            <a
-              href={KIT_PDF_HREF}
-              download
-              className="inline-flex items-center justify-center rounded-md border border-navy/20 px-5 py-3 text-base font-medium text-navy transition-colors hover:border-forest/40"
-            >
-              Download the Mini Village Kit
-            </a>
+          <h2 className="font-display max-w-2xl text-3xl sm:text-4xl">
+            Multiplying impact across communities
+          </h2>
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-ivory/70 sm:text-lg">
+            One village is a beginning, not a ceiling. When a community learns
+            how to coordinate—what helped, what did not, what to try next—that
+            learning can travel. The movement grows like a snowball: each honest
+            launch gives the next place more to work with than the last.
+          </p>
+
+          <ol className="mt-12 flex flex-col items-center gap-6 sm:flex-row sm:items-end sm:justify-center sm:gap-4">
+            {[
+              { label: "Your village", size: "h-24 w-24", text: "text-sm" },
+              { label: "Shared learning", size: "h-32 w-32", text: "text-base" },
+              {
+                label: "The next community",
+                size: "h-40 w-40",
+                text: "text-base",
+              },
+            ].map((item, index) => (
+              <li key={item.label} className="flex items-end gap-4">
+                {index > 0 ? (
+                  <span
+                    className="mb-16 hidden w-8 border-t border-dotted border-ivory/35 sm:block"
+                    aria-hidden
+                  />
+                ) : null}
+                <div className="flex flex-col items-center gap-3">
+                  <span
+                    className={`inline-flex ${item.size} items-center justify-center rounded-full border border-ivory/25 bg-ivory/8 text-center ${item.text} leading-tight text-ivory/90`}
+                  >
+                    {item.label}
+                  </span>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* 6. Closing CTA */}
+      <section className="relative overflow-hidden bg-ivory">
+        <BrandDots className="absolute top-1/2 right-6 hidden -translate-y-1/2 lg:flex" />
+        <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-24">
+          <div className="max-w-2xl">
+            <h2 className="font-display text-3xl text-navy sm:text-4xl">
+              What could a stronger village make possible in your community?
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-ink-muted sm:text-lg">
+              Start with a conversation, a readiness check, or a free starter
+              kit. You do not need a finished village—only a responsible place
+              to begin.
+            </p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <Link
+                href="/bring-village360-here"
+                className="inline-flex items-center justify-center rounded-md bg-forest px-5 py-3 text-base font-medium text-ivory transition-colors hover:bg-forest-deep"
+              >
+                Schedule a Conversation
+              </Link>
+              <a
+                href={KIT_PDF_HREF}
+                download
+                className="inline-flex items-center justify-center rounded-md border border-navy/20 px-5 py-3 text-base font-medium text-navy transition-colors hover:border-forest/40"
+              >
+                Download the Mini Village Kit
+              </a>
+            </div>
           </div>
         </div>
       </section>

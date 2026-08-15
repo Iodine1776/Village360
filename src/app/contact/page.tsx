@@ -4,7 +4,7 @@ import { MailtoInquiryForm } from "@/components/MailtoInquiryForm";
 import { CONTACT_EMAIL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Connect",
   description:
     "Find the right Village360 path: launch, partnership, volunteering, family support, or a general question.",
 };

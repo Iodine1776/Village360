@@ -39,6 +39,12 @@ export function SiteHeader() {
             Join the Movement
           </Link>
           <Link
+            href="/contact"
+            className="hidden text-sm text-navy-soft transition-colors hover:text-forest sm:inline"
+          >
+            Connect
+          </Link>
+          <Link
             href="/bring-village360-here"
             className="rounded-md bg-forest px-3.5 py-2 text-sm font-medium text-ivory transition-colors hover:bg-forest-deep"
           >

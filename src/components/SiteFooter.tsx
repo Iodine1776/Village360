@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Logo } from "@/components/Logo";
+import { SocialLinks } from "@/components/SocialLinks";
 
 const columns = [
   {
@@ -19,7 +20,7 @@ const columns = [
       { href: "/bring-village360-here", label: "Bring Village360 Here" },
       { href: "/launch-a-village", label: "Launch a Village" },
       { href: "/resources", label: "Resources" },
-      { href: "/contact", label: "Contact" },
+      { href: "/contact", label: "Connect" },
     ],
   },
 ];
@@ -30,10 +31,7 @@ export function SiteFooter() {
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:px-8 md:grid-cols-[1.4fr_1fr_1fr]">
         <div className="space-y-4">
           <Logo href="/" variant="onDark" />
-          <p className="max-w-sm text-sm leading-relaxed text-ivory/75">
-            A movement of communities choosing coordinated, relationship-centered
-            support before families reach crisis.
-          </p>
+          <SocialLinks className="pt-2" />
           <p className="text-sm text-ivory/55">joinvillage360.com</p>
         </div>
 
