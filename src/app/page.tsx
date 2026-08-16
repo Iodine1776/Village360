@@ -193,52 +193,44 @@ export default function HomePage() {
       </section>
 
       {/* 5. Snowball */}
-      <section className="relative overflow-hidden bg-navy text-ivory">
+      <section className="relative overflow-hidden bg-[#0c1018] text-ivory">
         <BrandDots
           orientation="horizontal"
-          className="absolute top-8 right-8 hidden opacity-80 lg:flex"
+          className="absolute top-8 right-8 hidden opacity-35 lg:flex"
         />
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
-          <p className="mb-3 text-xs font-semibold tracking-[0.18em] text-mist/80 uppercase">
+          <h2 className="mb-3 text-xs font-semibold tracking-[0.18em] text-mist/80 uppercase">
             The snowball
-          </p>
-          <h2 className="font-display max-w-2xl text-3xl sm:text-4xl">
-            Multiplying impact across communities
           </h2>
-          <p className="mt-4 max-w-2xl text-base leading-relaxed text-ivory/70 sm:text-lg">
-            One village is a beginning, not a ceiling. When a community learns
-            how to coordinate—what helped, what did not, what to try next—that
-            learning can travel. The movement grows like a snowball: each honest
-            launch gives the next place more to work with than the last.
+          <p className="max-w-2xl text-base leading-relaxed text-ivory/70 sm:text-lg">
+            One village is a beginning, not a ceiling. Each honest launch gives
+            the next place more to work with than the last.
           </p>
 
-          <ol className="mt-12 flex flex-col items-center gap-6 sm:flex-row sm:items-end sm:justify-center sm:gap-4">
-            {[
-              { label: "Your village", size: "h-24 w-24", text: "text-sm" },
-              { label: "Shared learning", size: "h-32 w-32", text: "text-base" },
-              {
-                label: "The next community",
-                size: "h-40 w-40",
-                text: "text-base",
-              },
-            ].map((item, index) => (
-              <li key={item.label} className="flex items-end gap-4">
-                {index > 0 ? (
-                  <span
-                    className="mb-16 hidden w-8 border-t border-dotted border-ivory/35 sm:block"
-                    aria-hidden
-                  />
-                ) : null}
-                <div className="flex flex-col items-center gap-3">
-                  <span
-                    className={`inline-flex ${item.size} items-center justify-center rounded-full border border-ivory/25 bg-ivory/8 text-center ${item.text} leading-tight text-ivory/90`}
-                  >
-                    {item.label}
-                  </span>
-                </div>
-              </li>
-            ))}
-          </ol>
+          <figure className="relative mt-10 overflow-hidden rounded-2xl border border-ivory/10 bg-black shadow-[0_24px_64px_rgba(0,0,0,0.45)]">
+            <Image
+              src="/snowball.png"
+              alt="Multiplying impact across communities: a village launch shares learning and funding that help another community open. Strengthen the village. Stabilize the family. Change the trajectory."
+              width={2064}
+              height={512}
+              className="h-auto w-full object-contain"
+              sizes="(min-width: 1024px) 64rem, 100vw"
+            />
+            <Link
+              href="/the-model"
+              className="absolute bottom-[8%] left-[1.5%] z-10 h-[18%] w-[22%] rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mist"
+              aria-label="See how it scales — explore the model"
+            />
+          </figure>
+
+          <div className="mt-8">
+            <Link
+              href="/the-model"
+              className="inline-flex items-center text-sm font-medium text-mist transition-colors hover:text-ivory"
+            >
+              See How It Scales →
+            </Link>
+          </div>
         </div>
       </section>
 
