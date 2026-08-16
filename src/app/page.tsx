@@ -29,7 +29,9 @@ export default function HomePage() {
             The Village360 Movement
           </p>
           <h1 className="animate-rise font-display max-w-xl text-4xl leading-[1.12] font-medium tracking-tight text-ivory sm:text-5xl lg:text-[3.35rem]">
-            Every family <span className="italic">needs</span> a village.
+            Every family
+            <br />
+            <span className="italic">needs</span> a village.
           </h1>
           <p className="animate-rise-delay mt-6 max-w-md text-lg leading-relaxed text-ivory/88 sm:text-xl">
             Village360 equips communities with structure, tools, and
