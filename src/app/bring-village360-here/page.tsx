@@ -30,7 +30,7 @@ const startingPoints = [
     body: "One focused offering to meet a clear need—and learn as you go.",
   },
   {
-    name: "Coordinated pathway",
+    name: "Collaborative pathway",
     body: "Connect youth, caregiver, or workforce supports so families are not navigating silos alone.",
   },
   {
@@ -74,7 +74,7 @@ const inquiryFields = [
     options: [
       { value: "exploring", label: "Still exploring / not sure" },
       { value: "program", label: "Program launch" },
-      { value: "pathway", label: "Coordinated pathway" },
+      { value: "pathway", label: "Collaborative pathway" },
       { value: "village", label: "Full village launch" },
     ],
   },
@@ -113,7 +113,7 @@ export default function BringHerePage() {
         </h1>
         <p className="animate-rise-delay mt-6 max-w-2xl text-lg leading-relaxed text-ink-muted sm:text-xl">
           Village360 helps churches, nonprofits, schools, courts, and coalitions
-          translate shared conviction into trained leadership, coordinated
+          translate shared conviction into trained leadership, collaborative
           programs, reliable relationships, and honest learning.
         </p>
         <div className="animate-rise-late mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">

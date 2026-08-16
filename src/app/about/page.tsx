@@ -38,7 +38,7 @@ export default function AboutPage() {
         </h1>
         <p className="animate-rise-delay mt-6 max-w-2xl text-lg leading-relaxed text-ink-muted sm:text-xl">
           Village360 began with a conviction: vulnerable families need
-          coordinated, relationship-centered support before crisis becomes
+          collaborative, relationship-centered support before crisis becomes
           separation. The movement is stewarded carefully—and designed so local
           leaders can carry it forward with integrity.
         </p>
@@ -111,8 +111,8 @@ export default function AboutPage() {
             </p>
             <p>
               Village360 grows from that same conviction at community scale:
-              belonging and practical support should be coordinated before
-              families are alone in crisis.
+              belonging and practical support should happen through collaboration
+              before families are alone in crisis.
             </p>
           </div>
 

@@ -62,10 +62,6 @@ export const NEED_STATS = [
     display: "3 in 4",
     detail:
       "Young men in the Midwest Study who had been incarcerated by age 26 after aging out of care. More than two in five young women had too.",
-    secondary: {
-      display: "2 in 5",
-      detail: "young women, same study",
-    },
     sourceIds: ["midwest-26"],
   },
   {

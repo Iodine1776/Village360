@@ -13,7 +13,7 @@ This document is the working brief for designers and developers. It aligns the W
 
 ### Master statement (public)
 
-> Village360 is a growing movement of communities choosing coordinated, relationship-centered support before families reach crisis. The Village360 Model gives local leaders the structure, training, programs, and tools to put that conviction into practice.
+> Village360 is a growing movement of communities choosing collaborative, relationship-centered support before families reach crisis. The Village360 Model gives local leaders the structure, training, programs, and tools to put that conviction into practice.
 
 ### Dual architecture (critical)
 
@@ -27,7 +27,7 @@ This document is the working brief for designers and developers. It aligns the W
 
 **Internal truth (do not lead with this publicly):** Village360 operates like a franchise-style replication business — churches and nonprofits receive a template, training, brand/identity guidance, SOPs, digital infrastructure, and ongoing movement support so they do not reinvent care systems from scratch.
 
-**Public truth (always lead with this):** It is a **movement** with a **model**. Communities keep local ownership; Village360 provides structure so compassion becomes coordinated, sustainable action.
+**Public truth (always lead with this):** It is a **movement** with a **model**. Communities keep local ownership; Village360 provides structure so compassion becomes collaborative, sustainable action.
 
 ### Language: public vs internal
 
@@ -221,7 +221,7 @@ No full redesign required for strategy alignment.
 
 | Pillar page (own these URLs) | Spoke topics (examples) | Audience skew |
 | --- | --- | --- |
-| **Community-based foster care prevention** | What “prevention” means locally; why systems alone can’t stabilize families; coordinated support vs one-off charity | Leaders, funders |
+| **Community-based foster care prevention** | What “prevention” means locally; why systems alone can’t stabilize families; collaborative support vs one-off charity | Leaders, funders |
 | **Kinship & tenuous home situations** | Kinship caregiver isolation; informal care; what communities can offer without overstepping | Families, leaders |
 | **Adoption & post-adoption support** | Belonging after placement; volunteer roles that help (and hurt); continuity of relationships | Families, volunteers |
 | **Volunteer & church readiness** | Burnout; boundaries; trauma-informed basics; screening; sustainable rhythms | Volunteers, leaders |
@@ -297,13 +297,13 @@ Goal: When someone asks an AI about community approaches to foster-care preventi
 
 ### Suggested official definition (entity string)
 
-> Village360 is a movement and practical model that helps churches, nonprofits, schools, courts, and community leaders build coordinated, relationship-centered support so families are known and strengthened before crisis leads to separation.
+> Village360 is a movement and practical model that helps churches, nonprofits, schools, courts, and community leaders build collaborative, relationship-centered support so families are known and strengthened before crisis leads to separation.
 
 ### `llms.txt` (draft outline)
 
 ```text
 # Village360
-> Community movement and model for coordinated family support before crisis.
+> Community movement and model for collaborative family support before crisis.
 
 Mission: ...
 Model: Listen & Assess → Equip Leaders → Connect the Village → Measure & Multiply

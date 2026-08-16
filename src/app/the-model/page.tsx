@@ -5,7 +5,7 @@ import { KIT_PDF_HREF } from "@/lib/site";
 export const metadata: Metadata = {
   title: "The Model",
   description:
-    "The Village360 Model turns shared concern into coordinated local action—aligning people, programs, and infrastructure around families.",
+    "The Village360 Model turns shared concern into collaborative local action—aligning people, programs, and infrastructure around families.",
 };
 
 const stages = [
@@ -22,7 +22,7 @@ const stages = [
   {
     name: "Connect the Village",
     detail:
-      "Create coordinated pathways of practical, emotional, and relational support so families are not handed from one disconnected helper to another.",
+      "Create collaborative pathways of practical, emotional, and relational support so families are not handed from one disconnected helper to another.",
   },
   {
     name: "Measure & Multiply",
@@ -51,7 +51,7 @@ const layers = [
 
 const shifts = [
   { from: "Isolated efforts", to: "Shared strategy" },
-  { from: "Crisis-only response", to: "Earlier, coordinated support" },
+  { from: "Crisis-only response", to: "Earlier, collaborative support" },
   { from: "Unclear roles", to: "Defined responsibilities" },
   { from: "Short bursts of help", to: "Relational continuity" },
   { from: "Activity for its own sake", to: "Learning what actually helps" },
@@ -71,7 +71,7 @@ export default function TheModelPage() {
           <span className="text-forest">It needs a way to work.</span>
         </h1>
         <p className="animate-rise-delay mt-6 max-w-2xl text-lg leading-relaxed text-ink-muted sm:text-xl">
-          The Village360 Model turns shared concern into coordinated local
+          The Village360 Model turns shared concern into collaborative local
           action—aligning people, programs, relationships, and infrastructure
           around families.
         </p>
@@ -104,7 +104,7 @@ export default function TheModelPage() {
               <h3 className="font-display text-xl text-navy">The movement</h3>
               <p className="mt-4 text-base leading-relaxed text-ink-muted">
                 Village360 is a growing movement of communities choosing
-                coordinated, relationship-centered support before families reach
+                collaborative, relationship-centered support before families reach
                 crisis. It is a shared conviction: the foster care crisis cannot
                 be answered by the foster care system alone.
               </p>
@@ -115,7 +115,7 @@ export default function TheModelPage() {
                 The Village360 Model is how communities put that conviction into
                 practice. Local villages keep ownership. Village360 provides
                 training, tools, and shared principles so compassion becomes
-                coordinated, sustainable action—without reinventing care from
+                collaborative, sustainable action—without reinventing care from
                 scratch.
               </p>
             </div>
@@ -132,7 +132,7 @@ export default function TheModelPage() {
           How communities put the movement into practice
         </p>
         <h2 className="font-display max-w-2xl text-3xl text-navy sm:text-4xl">
-          Four stages. One coordinated village.
+          Four stages. One collaborative village.
         </h2>
         <ol className="mt-12 grid gap-8 sm:grid-cols-2">
           {stages.map((stage, index) => (

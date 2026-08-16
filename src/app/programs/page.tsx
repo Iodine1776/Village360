@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Programs",
   description:
-    "Village360 programs are how people practice the movement—coordinated offerings for youth, caregivers, and community leaders, not a buffet of disconnected products.",
+    "Village360 programs are how people practice the movement—collaborative offerings for youth, caregivers, and community leaders, not a buffet of disconnected products.",
 };
 
 const programs = [
@@ -65,7 +65,7 @@ export default function ProgramsPage() {
         </h1>
         <p className="animate-rise-delay mt-6 max-w-2xl text-lg leading-relaxed text-ink-muted sm:text-xl">
           Programs are not the movement. They are how people begin practicing
-          it—skills, relationships, and rhythms that bring coordinated support
+          it—skills, relationships, and rhythms that bring collaborative support
           to life.
         </p>
       </section>
@@ -74,7 +74,7 @@ export default function ProgramsPage() {
         <div className="mx-auto max-w-6xl px-5 py-10 sm:px-8">
           <p className="max-w-3xl text-base leading-relaxed text-ink-muted">
             Village360 programs can be offered on their own. They create deeper
-            change when they are coordinated as part of a local village—not
+            change when they work together as part of a local village—not
             chosen like a buffet of unrelated products.
           </p>
         </div>
@@ -82,7 +82,7 @@ export default function ProgramsPage() {
 
       <section className="relative mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
         <p className="mb-3 text-xs font-semibold tracking-[0.18em] text-forest uppercase">
-          Coordinated offerings
+          Collaborative offerings
         </p>
         <h2 className="font-display max-w-2xl text-3xl text-navy sm:text-4xl">
           Five ways people practice the work.

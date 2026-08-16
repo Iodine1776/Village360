@@ -17,7 +17,7 @@ const awayFrom = [
 
 const toward = [
   "Prevention and early support",
-  "Coordinated pathways of care",
+  "Collaborative pathways of care",
   "Shared community responsibility",
   "Relational continuity over time",
   "Family agency and dignity",
@@ -54,7 +54,7 @@ const principles = [
 const waysToAct = [
   {
     title: "Learn",
-    body: "Understand the crisis as a village problem—and what coordinated support can look like.",
+    body: "Understand the crisis as a village problem—and what collaborative support can look like.",
     href: "/resources",
     label: "Explore resources",
   },
@@ -101,7 +101,7 @@ export default function TheMovementPage() {
         <p className="animate-rise-delay mt-6 max-w-2xl text-lg leading-relaxed text-ink-muted sm:text-xl">
           Families do not live inside systems. They live inside communities.
           Village360 is a movement to rebuild shared responsibility around
-          them—so care is coordinated, relational, and present before crisis
+          them—so care is collaborative, relational, and present before crisis
           becomes separation.
         </p>
         <div className="animate-rise-late mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -271,7 +271,7 @@ export default function TheMovementPage() {
           <p className="mt-4 text-base leading-relaxed text-ink-muted sm:text-lg">
             The Village360 Model is how communities put this movement into
             practice—with structure, training, programs, and tools so compassion
-            becomes coordinated, sustainable action. Local villages keep
+            becomes collaborative, sustainable action. Local villages keep
             ownership; shared principles protect integrity.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">

@@ -20,7 +20,7 @@ const modelImpact = [
   "Completion and follow-through—not attendance theater",
   "Participant growth in skills, confidence, and connection",
   "Caregiver connection and referral quality",
-  "Local coordination and implementation quality",
+  "Local collaboration and implementation quality",
 ];
 
 const levels = [
@@ -34,7 +34,7 @@ const levels = [
   },
   {
     name: "Community",
-    body: "Coordination, partner engagement, local capacity.",
+    body: "Collaboration, partner engagement, local capacity.",
   },
   {
     name: "System",

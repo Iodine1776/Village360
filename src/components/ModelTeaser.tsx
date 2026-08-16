@@ -15,7 +15,7 @@ const stages = [
   {
     name: "Connect the Village",
     detail:
-      "Coordinate practical, emotional, and relational support so families are not handed between disconnected helpers.",
+      "Collaborate on practical, emotional, and relational support so families are not handed between disconnected helpers.",
   },
   {
     name: "Measure & Multiply",

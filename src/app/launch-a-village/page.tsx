@@ -50,7 +50,7 @@ const steps = [
   },
   {
     name: "Initial delivery",
-    detail: "Begin coordinated programs and family-support pathways.",
+    detail: "Begin collaborative programs and family-support pathways.",
   },
   {
     name: "Ongoing growth",

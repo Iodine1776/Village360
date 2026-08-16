@@ -53,7 +53,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 2. Coordination */}
+      {/* 2. Collaboration */}
       <section className="relative overflow-hidden bg-ivory">
         <div className="pointer-events-none absolute top-16 right-10 hidden lg:block" aria-hidden>
           <BrandDots orientation="horizontal" />
@@ -62,11 +62,11 @@ export default function HomePage() {
           <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-12">
             <div className="lg:col-span-5">
               <p className="mb-3 text-xs font-semibold tracking-[0.18em] text-forest uppercase">
-                Coordination
+                Collaboration
               </p>
               <h2 className="font-display text-3xl text-navy sm:text-4xl">
                 Most communities don&apos;t lack caring people. They lack
-                coordination.
+                collaboration.
               </h2>
               <p className="mt-4 text-base leading-relaxed text-ink-muted sm:text-lg">
                 Schools, congregations, nonprofits, courts, agencies, health
@@ -84,7 +84,7 @@ export default function HomePage() {
             <div className="lg:col-span-7">
               <Image
                 src="/home-graphic-1.png"
-                alt="Community partners—schools, faith communities, nonprofits, courts, local agencies, health providers, and businesses—coordinating around the family at the center."
+                alt="Community partners—schools, faith communities, nonprofits, courts, local agencies, health providers, and businesses—collaborating around the family at the center."
                 width={2048}
                 height={1318}
                 className="mx-auto h-auto w-full max-w-lg object-contain lg:max-w-xl"
@@ -176,8 +176,9 @@ export default function HomePage() {
           </Link>
 
           <p className="mt-12 max-w-2xl text-base leading-relaxed text-ink-muted">
-            These are need figures—not Village360 results. We will not invent
-            outcome dashboards. The scale of the work is already large enough.
+            These numbers show the need—not Village360&apos;s results. Until we
+            have our own outcome data, we share public figures that help explain
+            why this work matters.
           </p>
 
           <ul className="mt-10 grid gap-5 sm:grid-cols-2">
