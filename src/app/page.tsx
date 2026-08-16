@@ -95,7 +95,62 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. How Village360 Works */}
+      {/* 3. People / Programs / Infrastructure */}
+      <section className="relative border-t border-navy/8 bg-ivory">
+        <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
+          <h2 className="font-display mx-auto max-w-3xl text-center text-3xl text-navy sm:text-4xl">
+            A community operating system—not another standalone program.
+          </h2>
+          <ul className="mt-14 grid gap-10 sm:grid-cols-3 sm:gap-0">
+            <li className="px-4 text-center sm:px-8">
+              <Image
+                src="/layer-people.png"
+                alt=""
+                width={128}
+                height={128}
+                className="mx-auto h-16 w-16 object-contain sm:h-20 sm:w-20"
+              />
+              <h3 className="font-display mt-5 text-xl text-navy">People</h3>
+              <p className="mt-3 text-sm leading-relaxed text-ink-muted sm:text-base">
+                Engaged leaders, trained volunteers, and everyday neighbors
+                committed to showing up for families.
+              </p>
+            </li>
+            <li className="border-navy/10 px-4 text-center sm:border-x sm:border-dashed sm:px-8">
+              <Image
+                src="/layer-programs.svg"
+                alt=""
+                width={128}
+                height={128}
+                className="mx-auto h-16 w-16 object-contain sm:h-20 sm:w-20"
+              />
+              <h3 className="font-display mt-5 text-xl text-navy">Programs</h3>
+              <p className="mt-3 text-sm leading-relaxed text-ink-muted sm:text-base">
+                Evidence-informed supports that meet real needs—practical,
+                relational, and easy to access.
+              </p>
+            </li>
+            <li className="px-4 text-center sm:px-8">
+              <Image
+                src="/layer-infrastructure.svg"
+                alt=""
+                width={128}
+                height={128}
+                className="mx-auto h-16 w-16 object-contain sm:h-20 sm:w-20"
+              />
+              <h3 className="font-display mt-5 text-xl text-navy">
+                Infrastructure
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-ink-muted sm:text-base">
+                Shared systems, data, and processes that make collaboration
+                seamless and sustainable.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      {/* 4. How Village360 Works */}
       <section className="relative border-y border-navy/8 bg-ivory-deep/50">
         <BrandDots className="absolute top-16 left-4 hidden opacity-60 lg:flex" />
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
@@ -103,7 +158,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4. Impact / needs */}
+      {/* 5. Impact / needs */}
       <section className="relative bg-ivory">
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
           <p className="mb-3 text-xs font-semibold tracking-[0.18em] text-forest uppercase">
@@ -203,7 +258,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 5. Multiplying impact */}
+      {/* 6. Multiplying impact */}
       <section className="relative overflow-hidden bg-ivory">
         <BrandDots
           orientation="horizontal"
@@ -282,7 +337,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 6. Closing CTA */}
+      {/* 7. Closing CTA */}
       <section className="relative overflow-hidden bg-ivory">
         <BrandDots className="absolute top-1/2 right-6 hidden -translate-y-1/2 lg:flex" />
         <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-24">
