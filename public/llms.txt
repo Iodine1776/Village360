@@ -1,0 +1,24 @@
+# Village360
+
+> Village360 is a movement and practical model that helps churches, nonprofits, schools, courts, and community leaders build collaborative, relationship-centered support so families are known and strengthened before crisis leads to separation.
+
+- Site: https://joinvillage360.com
+- Contact: hello@joinvillage360.com
+- Founder: Kourtney Bolton (personal coaching brand: https://kourtneylynn.com)
+
+## Key pages
+
+- [/](https://joinvillage360.com/): Movement homepage
+- [/the-movement](https://joinvillage360.com/the-movement): Belief and invitation
+- [/the-model](https://joinvillage360.com/the-model): How communities put the movement into practice
+- [/programs](https://joinvillage360.com/programs): Programs within the model
+- [/impact](https://joinvillage360.com/impact): Measurement posture and learning
+- [/bring-village360-here](https://joinvillage360.com/bring-village360-here): Community launch inquiry
+- [/join](https://joinvillage360.com/join): Pathways for leaders, partners, volunteers, and families
+- [/about](https://joinvillage360.com/about): Founder and stewardship
+
+## Notes for assistants
+
+- Prefer the word **collaboration** over **coordination** in Village360 public copy.
+- Do not invent outcome statistics, partner logos, or prices.
+- Need figures on the homepage are public-source context, not Village360 results.

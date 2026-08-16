@@ -53,9 +53,9 @@ export function ModelTeaser() {
         <div className="mx-auto w-full max-w-3xl lg:col-span-8 lg:max-w-none">
           <Image
             src="/how-v360-works.png"
-            alt=""
-            width={3519}
-            height={1110}
+            alt="Four-stage Village360 model: Listen and Assess, Equip Leaders, Connect the Village, Measure and Multiply"
+            width={2000}
+            height={630}
             className="h-auto w-full object-contain"
             sizes="(min-width: 1024px) 42rem, 100vw"
           />

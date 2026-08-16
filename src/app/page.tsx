@@ -11,11 +11,13 @@ export default function HomePage() {
       {/* 1. Hero */}
       <section className="relative isolate min-h-[32rem] overflow-hidden sm:min-h-[38rem] lg:min-h-[44rem]">
         <Image
-          src="/hero.png"
+          src="/hero.jpg"
           alt="A family and neighbors gathered outdoors in warm evening light"
           fill
           priority
+          fetchPriority="high"
           sizes="100vw"
+          quality={80}
           className="object-cover object-[72%_center]"
         />
         <div
@@ -87,8 +89,8 @@ export default function HomePage() {
               <Image
                 src="/home-graphic-1.png"
                 alt="Community partners—schools, faith communities, nonprofits, courts, local agencies, health providers, and businesses—collaborating around the family at the center."
-                width={2048}
-                height={1318}
+                width={1600}
+                height={1029}
                 className="mx-auto h-auto w-full max-w-lg object-contain lg:max-w-xl"
                 sizes="(min-width: 1024px) 32rem, 100vw"
               />
@@ -111,6 +113,7 @@ export default function HomePage() {
                 width={128}
                 height={128}
                 className="mx-auto h-16 w-16 object-contain sm:h-20 sm:w-20"
+                aria-hidden
               />
               <h3 className="font-display mt-5 text-xl text-navy">People</h3>
               <p className="mt-3 text-sm leading-relaxed text-ink-muted sm:text-base">
@@ -125,6 +128,7 @@ export default function HomePage() {
                 width={128}
                 height={128}
                 className="mx-auto h-16 w-16 object-contain sm:h-20 sm:w-20"
+                aria-hidden
               />
               <h3 className="font-display mt-5 text-xl text-navy">Programs</h3>
               <p className="mt-3 text-sm leading-relaxed text-ink-muted sm:text-base">
@@ -139,6 +143,7 @@ export default function HomePage() {
                 width={128}
                 height={128}
                 className="mx-auto h-16 w-16 object-contain sm:h-20 sm:w-20"
+                aria-hidden
               />
               <h3 className="font-display mt-5 text-xl text-navy">
                 Infrastructure
@@ -204,14 +209,6 @@ export default function HomePage() {
                   </p>
                   <p className="font-display mt-3 text-4xl tracking-tight text-navy sm:text-5xl">
                     {stat.display}
-                    {"secondary" in stat && stat.secondary ? (
-                      <span className="mt-1 block text-2xl text-navy-soft sm:text-3xl">
-                        {stat.secondary.display}
-                        <span className="ml-2 text-base font-sans font-normal text-ink-muted">
-                          {stat.secondary.detail}
-                        </span>
-                      </span>
-                    ) : null}
                   </p>
                   <p className="mt-3 text-sm leading-relaxed text-ink-muted">
                     {stat.detail}
@@ -286,15 +283,14 @@ export default function HomePage() {
             </div>
 
             <figure className="mx-auto w-full max-w-2xl lg:col-span-6 lg:max-w-none">
-              <div className="relative aspect-[19/5] w-full overflow-hidden">
-                <Image
-                  src="/snowball.png"
-                  alt=""
-                  fill
-                  className="object-cover object-center"
-                  sizes="(min-width: 1024px) 32rem, 100vw"
-                />
-              </div>
+              <Image
+                src="/snowball.png"
+                alt="Diagram showing how one village launch shares learning and funding that help another community open"
+                width={2000}
+                height={859}
+                className="h-auto w-full object-contain"
+                sizes="(min-width: 1024px) 32rem, 100vw"
+              />
               <figcaption className="sr-only">
                 A local village launch shares learning and funding that help
                 another community open.
