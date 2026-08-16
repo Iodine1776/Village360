@@ -51,15 +51,14 @@ export function ModelTeaser() {
         </div>
 
         <div className="mx-auto w-full max-w-3xl lg:col-span-8 lg:max-w-none">
-          <div className="relative aspect-[4/1] w-full">
-            <Image
-              src="/how-v360-works.png"
-              alt=""
-              fill
-              className="object-contain object-bottom"
-              sizes="(min-width: 1024px) 42rem, 100vw"
-            />
-          </div>
+          <Image
+            src="/how-v360-works.png"
+            alt=""
+            width={3519}
+            height={1110}
+            className="h-auto w-full object-contain"
+            sizes="(min-width: 1024px) 42rem, 100vw"
+          />
           <ol className="mt-1 grid grid-cols-2 gap-x-3 gap-y-4 sm:grid-cols-4 sm:gap-x-4">
             {stages.map((stage) => (
               <li key={stage.name} className="text-center">
