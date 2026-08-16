@@ -96,7 +96,7 @@ export default function HomePage() {
       </section>
 
       {/* 3. How Village360 Works */}
-      <section className="relative overflow-hidden border-y border-navy/8 bg-ivory-deep/50">
+      <section className="relative border-y border-navy/8 bg-ivory-deep/50">
         <BrandDots className="absolute top-16 left-4 hidden opacity-60 lg:flex" />
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
           <ModelTeaser />
@@ -271,7 +271,7 @@ export default function HomePage() {
               </ol>
             </figure>
 
-            <p className="font-display text-xl leading-snug text-navy sm:text-2xl lg:col-span-3 lg:text-right">
+            <p className="font-display text-xl leading-snug text-navy sm:text-2xl lg:col-span-3 lg:self-center lg:text-right">
               Strengthen the village.
               <br />
               Stabilize the family.

@@ -51,12 +51,12 @@ export function ModelTeaser() {
         </div>
 
         <div className="mx-auto w-full max-w-3xl lg:col-span-8 lg:max-w-none">
-          <div className="relative aspect-[24/5] w-full overflow-hidden">
+          <div className="relative aspect-[4/1] w-full">
             <Image
               src="/how-v360-works.png"
               alt=""
               fill
-              className="object-cover object-center"
+              className="object-contain object-bottom"
               sizes="(min-width: 1024px) 42rem, 100vw"
             />
           </div>
