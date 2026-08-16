@@ -59,28 +59,38 @@ export default function HomePage() {
           <BrandDots orientation="horizontal" />
         </div>
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
-          <p className="mb-3 text-xs font-semibold tracking-[0.18em] text-forest uppercase">
-            Coordination
-          </p>
-          <h2 className="font-display max-w-3xl text-3xl text-navy sm:text-4xl">
-            Most communities don&apos;t lack caring people. They lack
-            coordination.
-          </h2>
-          <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink-muted sm:text-lg">
-            Schools, congregations, nonprofits, courts, agencies, health
-            providers, and businesses already show up. Village360 helps them
-            work as one village—with the family at the center, not lost between
-            systems.
-          </p>
-          <div className="mt-12">
-            <Image
-              src="/home-graphic-1.png"
-              alt="Community partners—schools, faith communities, nonprofits, courts, local agencies, health providers, and businesses—coordinating around the family at the center."
-              width={2048}
-              height={1318}
-              className="mx-auto h-auto w-full max-w-5xl object-contain"
-              sizes="(min-width: 1024px) 64rem, 100vw"
-            />
+          <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-12">
+            <div className="lg:col-span-5">
+              <p className="mb-3 text-xs font-semibold tracking-[0.18em] text-forest uppercase">
+                Coordination
+              </p>
+              <h2 className="font-display text-3xl text-navy sm:text-4xl">
+                Most communities don&apos;t lack caring people. They lack
+                coordination.
+              </h2>
+              <p className="mt-4 text-base leading-relaxed text-ink-muted sm:text-lg">
+                Schools, congregations, nonprofits, courts, agencies, health
+                providers, and businesses already show up. Village360 helps them
+                work as one village—with the family at the center, not lost
+                between systems.
+              </p>
+              <Link
+                href="/the-model"
+                className="mt-6 inline-flex text-sm font-medium text-forest transition-colors hover:text-forest-deep"
+              >
+                Explore the Model →
+              </Link>
+            </div>
+            <div className="lg:col-span-7">
+              <Image
+                src="/home-graphic-1.png"
+                alt="Community partners—schools, faith communities, nonprofits, courts, local agencies, health providers, and businesses—coordinating around the family at the center."
+                width={2048}
+                height={1318}
+                className="mx-auto h-auto w-full max-w-lg object-contain lg:max-w-xl"
+                sizes="(min-width: 1024px) 32rem, 100vw"
+              />
+            </div>
           </div>
         </div>
       </section>
