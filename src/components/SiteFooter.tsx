@@ -59,9 +59,12 @@ export function SiteFooter() {
       <div className="border-t border-ivory/10">
         <div className="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-5 text-xs text-ivory/45 sm:flex-row sm:items-center sm:justify-between sm:px-8">
           <p>© {new Date().getFullYear()} Village360. All rights reserved.</p>
-          <div className="flex gap-4">
+          <div className="flex flex-wrap gap-x-4 gap-y-2">
             <Link href="/privacy" className="hover:text-ivory/70">
               Privacy
+            </Link>
+            <Link href="/terms" className="hover:text-ivory/70">
+              Terms
             </Link>
             <Link href="/accessibility" className="hover:text-ivory/70">
               Accessibility

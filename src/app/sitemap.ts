@@ -13,6 +13,7 @@ const routes = [
   "/launch-a-village",
   "/contact",
   "/privacy",
+  "/terms",
   "/accessibility",
 ];
 
