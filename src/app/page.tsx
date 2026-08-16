@@ -85,8 +85,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. Short model teaser */}
-      <section className="relative border-y border-navy/8 bg-ivory-deep/50">
+      {/* 3. How Village360 Works */}
+      <section className="relative overflow-hidden border-y border-navy/8 bg-ivory-deep/50">
+        <BrandDots className="absolute top-16 left-4 hidden opacity-60 lg:flex" />
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
           <ModelTeaser />
         </div>
@@ -192,44 +193,80 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 5. Snowball */}
-      <section className="relative overflow-hidden bg-[#0c1018] text-ivory">
+      {/* 5. Multiplying impact */}
+      <section className="relative overflow-hidden bg-ivory">
         <BrandDots
           orientation="horizontal"
-          className="absolute top-8 right-8 hidden opacity-35 lg:flex"
+          className="absolute top-8 right-8 hidden opacity-50 lg:flex"
         />
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
-          <h2 className="mb-3 text-xs font-semibold tracking-[0.18em] text-mist/80 uppercase">
-            The snowball
-          </h2>
-          <p className="max-w-2xl text-base leading-relaxed text-ivory/70 sm:text-lg">
-            One village is a beginning, not a ceiling. Each honest launch gives
-            the next place more to work with than the last.
-          </p>
+          <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-8">
+            <div className="lg:col-span-3">
+              <h2 className="font-display text-3xl text-navy sm:text-4xl">
+                Multiplying Impact Across Communities
+              </h2>
+              <p className="mt-4 text-base leading-relaxed text-ink-muted">
+                When one community launches a Village, it helps open doors for
+                another.
+              </p>
+              <Link
+                href="/the-model"
+                className="mt-6 inline-flex text-sm font-medium text-forest transition-colors hover:text-forest-deep"
+              >
+                See How It Scales →
+              </Link>
+            </div>
 
-          <figure className="relative mt-10 overflow-hidden rounded-2xl border border-ivory/10 bg-black shadow-[0_24px_64px_rgba(0,0,0,0.45)]">
-            <Image
-              src="/snowball.png"
-              alt="Multiplying impact across communities: a village launch shares learning and funding that help another community open. Strengthen the village. Stabilize the family. Change the trajectory."
-              width={2064}
-              height={512}
-              className="h-auto w-full object-contain"
-              sizes="(min-width: 1024px) 64rem, 100vw"
-            />
-            <Link
-              href="/the-model"
-              className="absolute bottom-[8%] left-[1.5%] z-10 h-[18%] w-[22%] rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mist"
-              aria-label="See how it scales — explore the model"
-            />
-          </figure>
+            <figure className="lg:col-span-6">
+              <Image
+                src="/snowball.png"
+                alt=""
+                width={4096}
+                height={1760}
+                className="mx-auto h-auto w-full object-contain"
+                sizes="(min-width: 1024px) 32rem, 100vw"
+              />
+              <figcaption className="sr-only">
+                A local village launch shares learning and funding that help
+                another community open.
+              </figcaption>
+              <ol className="mt-4 grid gap-5 sm:grid-cols-3 sm:gap-3">
+                <li className="text-center">
+                  <h3 className="font-display text-base text-forest">
+                    Your Village Launch
+                  </h3>
+                  <p className="mt-1 text-xs leading-relaxed text-ink-muted sm:text-sm">
+                    Local leaders come together. Systems align. Families get
+                    support.
+                  </p>
+                </li>
+                <li className="text-center">
+                  <h3 className="font-display text-base text-navy">
+                    Shared Learning &amp; Funding
+                  </h3>
+                  <p className="mt-1 text-xs leading-relaxed text-ink-muted sm:text-sm">
+                    Open doors and provide launch support.
+                  </p>
+                </li>
+                <li className="text-center">
+                  <h3 className="font-display text-base text-navy">
+                    Another Community
+                  </h3>
+                  <p className="mt-1 text-xs leading-relaxed text-ink-muted sm:text-sm">
+                    A new Village launches with resources and relationships that
+                    accelerate impact.
+                  </p>
+                </li>
+              </ol>
+            </figure>
 
-          <div className="mt-8">
-            <Link
-              href="/the-model"
-              className="inline-flex items-center text-sm font-medium text-mist transition-colors hover:text-ivory"
-            >
-              See How It Scales →
-            </Link>
+            <p className="font-display text-xl leading-snug text-navy sm:text-2xl lg:col-span-3 lg:text-right">
+              Strengthen the village.
+              <br />
+              Stabilize the family.
+              <br />
+              Change the trajectory.
+            </p>
           </div>
         </div>
       </section>
