@@ -1,29 +1,24 @@
 import Image from "next/image";
 import Link from "next/link";
-import { BRAND_COLORS } from "@/lib/brand";
 
 const stages = [
   {
     name: "Listen & Assess",
-    color: BRAND_COLORS[0].hex,
     detail:
       "Map what already exists. Understand families, partners, and gaps before designing anything new.",
   },
   {
     name: "Equip Leaders",
-    color: BRAND_COLORS[1].hex,
     detail:
       "Train the people already willing to help—shared language, clear roles, sustainable rhythms.",
   },
   {
     name: "Connect the Village",
-    color: BRAND_COLORS[2].hex,
     detail:
       "Coordinate practical, emotional, and relational support so families are not handed between disconnected helpers.",
   },
   {
     name: "Measure & Multiply",
-    color: BRAND_COLORS[4].hex,
     detail:
       "Track what matters, learn out loud, and help the next community begin further along.",
   },
@@ -36,8 +31,8 @@ export function ModelTeaser() {
         The model, in brief
       </p>
 
-      <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-14">
-        <div className="lg:col-span-4">
+      <div className="grid items-start gap-8 lg:grid-cols-12 lg:gap-10">
+        <div className="lg:col-span-4 lg:pt-2">
           <h2 className="font-display text-3xl text-navy sm:text-4xl">
             How Village360 Works
           </h2>
@@ -55,28 +50,23 @@ export function ModelTeaser() {
           </Link>
         </div>
 
-        <div className="lg:col-span-8">
-          <Image
-            src="/how-v360-works.png"
-            alt=""
-            width={4096}
-            height={1760}
-            className="h-auto w-full object-contain"
-            sizes="(min-width: 1024px) 42rem, 100vw"
-          />
-          <ol className="mt-2 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4">
-            {stages.map((stage, index) => (
-              <li key={stage.name}>
-                <span
-                  className="text-xs font-semibold tracking-[0.16em] uppercase"
-                  style={{ color: stage.color }}
-                >
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <h3 className="font-display mt-1 text-lg text-navy">
+        <div className="mx-auto w-full max-w-3xl lg:col-span-8 lg:max-w-none">
+          <div className="relative aspect-[24/5] w-full overflow-hidden">
+            <Image
+              src="/how-v360-works.png"
+              alt=""
+              fill
+              className="object-cover object-center"
+              sizes="(min-width: 1024px) 42rem, 100vw"
+            />
+          </div>
+          <ol className="mt-1 grid grid-cols-2 gap-x-3 gap-y-4 sm:grid-cols-4 sm:gap-x-4">
+            {stages.map((stage) => (
+              <li key={stage.name} className="text-center">
+                <h3 className="font-display text-base text-navy sm:text-lg">
                   {stage.name}
                 </h3>
-                <p className="mt-1.5 text-sm leading-relaxed text-ink-muted">
+                <p className="mt-1 text-xs leading-relaxed text-ink-muted sm:text-sm">
                   {stage.detail}
                 </p>
               </li>

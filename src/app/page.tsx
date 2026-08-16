@@ -200,8 +200,8 @@ export default function HomePage() {
           className="absolute top-8 right-8 hidden opacity-50 lg:flex"
         />
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
-          <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-8">
-            <div className="lg:col-span-3">
+          <div className="grid items-start gap-8 lg:grid-cols-12 lg:gap-6">
+            <div className="lg:col-span-3 lg:pt-1">
               <h2 className="font-display text-3xl text-navy sm:text-4xl">
                 Multiplying Impact Across Communities
               </h2>
@@ -217,22 +217,23 @@ export default function HomePage() {
               </Link>
             </div>
 
-            <figure className="lg:col-span-6">
-              <Image
-                src="/snowball.png"
-                alt=""
-                width={4096}
-                height={1760}
-                className="mx-auto h-auto w-full object-contain"
-                sizes="(min-width: 1024px) 32rem, 100vw"
-              />
+            <figure className="mx-auto w-full max-w-2xl lg:col-span-6 lg:max-w-none">
+              <div className="relative aspect-[19/5] w-full overflow-hidden">
+                <Image
+                  src="/snowball.png"
+                  alt=""
+                  fill
+                  className="object-cover object-center"
+                  sizes="(min-width: 1024px) 32rem, 100vw"
+                />
+              </div>
               <figcaption className="sr-only">
                 A local village launch shares learning and funding that help
                 another community open.
               </figcaption>
-              <ol className="mt-4 grid gap-5 sm:grid-cols-3 sm:gap-3">
+              <ol className="mt-1 grid grid-cols-3 gap-x-2 sm:gap-x-4">
                 <li className="text-center">
-                  <h3 className="font-display text-base text-forest">
+                  <h3 className="font-display text-sm text-forest sm:text-base">
                     Your Village Launch
                   </h3>
                   <p className="mt-1 text-xs leading-relaxed text-ink-muted sm:text-sm">
@@ -241,7 +242,7 @@ export default function HomePage() {
                   </p>
                 </li>
                 <li className="text-center">
-                  <h3 className="font-display text-base text-navy">
+                  <h3 className="font-display text-sm text-navy sm:text-base">
                     Shared Learning &amp; Funding
                   </h3>
                   <p className="mt-1 text-xs leading-relaxed text-ink-muted sm:text-sm">
@@ -249,7 +250,7 @@ export default function HomePage() {
                   </p>
                 </li>
                 <li className="text-center">
-                  <h3 className="font-display text-base text-navy">
+                  <h3 className="font-display text-sm text-navy sm:text-base">
                     Another Community
                   </h3>
                   <p className="mt-1 text-xs leading-relaxed text-ink-muted sm:text-sm">
