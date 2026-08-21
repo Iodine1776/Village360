@@ -13,18 +13,24 @@ export const metadata: Metadata = {
 const layers = [
   {
     name: "People",
+    summary: "leaders, coaches, volunteers, partners",
     detail:
-      "Engaged community members, coaches, volunteers, and partners who build relationships, guide strategy, and mobilize resources around families.",
+      "Engaged community members who build relationships, guide strategy, and mobilize resources around families.",
+    color: "#4F623F",
   },
   {
     name: "Collaboration",
+    summary: "affiliates and partners already in your community",
     detail:
-      "Shared ways of working with affiliates and partners already in your community—so support is connected, not piecemeal.",
+      "Shared ways of working so support is connected—not a piecemeal path families have to assemble alone.",
+    color: "#2E4C7E",
   },
   {
     name: "Infrastructure",
+    summary: "pathways, systems, data, accountability",
     detail:
-      "Shared processes, pathways, data habits, and accountability that help a village learn and keep showing up.",
+      "Shared processes, data habits, and accountability that keep the village aligned and learning.",
+    color: "#6C48A8",
   },
 ];
 
@@ -229,7 +235,54 @@ export default function TheModelPage() {
         </div>
       </section>
 
-      {/* 3. What Village360 provides */}
+      {/* 3. Three layers of the village */}
+      <section className="relative border-t border-navy/8 bg-ivory-deep/40">
+        <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
+          <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-8">
+            <div className="lg:col-span-3">
+              <h2 className="font-display text-3xl text-navy sm:text-4xl">
+                The Three Layers of the Village
+              </h2>
+              <p className="mt-4 text-base leading-relaxed text-ink-muted">
+                A strong village has aligned people, collaboration, and the
+                infrastructure to sustain real impact.
+              </p>
+            </div>
+
+            <figure className="mx-auto flex w-full max-w-xs items-center justify-center rounded-2xl bg-navy p-4 lg:col-span-4 lg:max-w-none">
+              <Image
+                src="/3layer.png"
+                alt="Three concentric layers representing people, collaboration, and infrastructure"
+                width={1024}
+                height={1024}
+                className="h-auto w-full max-w-[17rem] object-contain sm:max-w-[19rem]"
+                sizes="(min-width: 1024px) 17rem, 15rem"
+              />
+            </figure>
+
+            <ul className="space-y-8 lg:col-span-5">
+              {layers.map((layer) => (
+                <li key={layer.name}>
+                  <h3 className="text-base font-semibold sm:text-lg">
+                    <span style={{ color: layer.color }}>{layer.name}:</span>{" "}
+                    <span
+                      className="font-medium"
+                      style={{ color: layer.color, opacity: 0.85 }}
+                    >
+                      {layer.summary}
+                    </span>
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-ink-muted sm:text-base">
+                    {layer.detail}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. What Village360 provides */}
       <section className="relative border-t border-navy/8 bg-ivory">
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
           <h2 className="font-display text-center text-3xl text-navy sm:text-4xl">
@@ -265,7 +318,7 @@ export default function TheModelPage() {
         </div>
       </section>
 
-      {/* 4. Movement vs model */}
+      {/* 5. Movement vs model */}
       <section className="relative border-y border-navy/8 bg-ivory-deep/50">
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
           <p className="mb-3 text-xs font-semibold tracking-[0.18em] text-forest uppercase">
@@ -297,32 +350,6 @@ export default function TheModelPage() {
             The movement can spread widely because the model can be implemented
             locally.
           </p>
-        </div>
-      </section>
-
-      {/* 5. Three layers */}
-      <section className="relative border-b border-navy/8 bg-navy text-ivory">
-        <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
-          <p className="mb-3 text-xs font-semibold tracking-[0.18em] text-mist/80 uppercase">
-            Three layers of the village
-          </p>
-          <h2 className="font-display max-w-2xl text-3xl sm:text-4xl">
-            People, collaboration, and infrastructure.
-          </h2>
-          <p className="mt-4 max-w-2xl text-base leading-relaxed text-ivory/70">
-            A strong village aligns the people who care, the ways they
-            collaborate, and the quiet systems that make impact sustainable.
-          </p>
-          <ul className="mt-12 grid gap-8 sm:grid-cols-3">
-            {layers.map((layer) => (
-              <li key={layer.name}>
-                <h3 className="font-display text-xl">{layer.name}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-ivory/65">
-                  {layer.detail}
-                </p>
-              </li>
-            ))}
-          </ul>
         </div>
       </section>
 
