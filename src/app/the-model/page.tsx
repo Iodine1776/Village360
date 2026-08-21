@@ -1,96 +1,219 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
+import { BrandDots } from "@/components/BrandDots";
 import { KIT_PDF_HREF } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "The Model",
   description:
-    "The Village360 Model turns shared concern into collaborative local action—aligning people, programs, and infrastructure around families.",
+    "The Village360 Model helps communities put shared concern into collaborative local practice—people, collaboration, and infrastructure around families.",
 };
-
-const stages = [
-  {
-    name: "Listen & Assess",
-    detail:
-      "Understand families, partners, gaps, and local capacity before designing solutions. Map what already exists instead of starting from zero.",
-  },
-  {
-    name: "Equip Leaders",
-    detail:
-      "Train coaches, volunteers, and partner organizations to work with shared language, clear roles, and sustainable rhythms.",
-  },
-  {
-    name: "Connect the Village",
-    detail:
-      "Create collaborative pathways of practical, emotional, and relational support so families are not handed from one disconnected helper to another.",
-  },
-  {
-    name: "Measure & Multiply",
-    detail:
-      "Track what matters, learn together, and help the next community begin well. Honesty is part of the model—not an afterthought.",
-  },
-];
 
 const layers = [
   {
     name: "People",
     detail:
-      "Local leaders, coaches, volunteers, and partners who already care—given structure so they can stay.",
+      "Engaged community members, coaches, volunteers, and partners who build relationships, guide strategy, and mobilize resources around families.",
   },
   {
-    name: "Programs",
+    name: "Collaboration",
     detail:
-      "Practical pathways for youth, caregivers, and community leaders. Tools for practicing the movement, not a menu of unrelated products.",
+      "Shared ways of working with affiliates and partners already in your community—so support is connected, not piecemeal.",
   },
   {
     name: "Infrastructure",
     detail:
-      "Pathways, onboarding, shared language, and simple ways to learn. The quiet systems that keep compassion from burning out.",
+      "Shared processes, pathways, data habits, and accountability that help a village learn and keep showing up.",
   },
 ];
 
+/** Icon paths optional until assets land in /public. */
 const shifts = [
-  { from: "Isolated efforts", to: "Shared strategy" },
-  { from: "Crisis-only response", to: "Earlier, collaborative support" },
-  { from: "Unclear roles", to: "Defined responsibilities" },
-  { from: "Short bursts of help", to: "Relational continuity" },
-  { from: "Activity for its own sake", to: "Learning what actually helps" },
+  {
+    id: "strategy",
+    before: "Isolated efforts",
+    after: "Shared strategy",
+    beforeIcon: undefined as string | undefined,
+    afterIcon: undefined as string | undefined,
+  },
+  {
+    id: "timing",
+    before: "Crisis response",
+    after: "Earlier support",
+    beforeIcon: undefined as string | undefined,
+    afterIcon: undefined as string | undefined,
+  },
+  {
+    id: "roles",
+    before: "Unclear roles",
+    after: "Defined responsibilities",
+    beforeIcon: undefined as string | undefined,
+    afterIcon: undefined as string | undefined,
+  },
+  {
+    id: "continuity",
+    before: "Inconsistent follow-through",
+    after: "Relational continuity",
+    beforeIcon: undefined as string | undefined,
+    afterIcon: undefined as string | undefined,
+  },
+  {
+    id: "outcomes",
+    before: "Activity counts",
+    after: "Measurable outcomes",
+    beforeIcon: undefined as string | undefined,
+    afterIcon: undefined as string | undefined,
+  },
 ];
+
+const provides = [
+  {
+    title: "Community assessment",
+    detail: "Map what already exists—families, partners, gaps, and capacity.",
+  },
+  {
+    title: "Launch strategy",
+    detail: "A clear path from readiness to a local village that can sustain itself.",
+  },
+  {
+    title: "Training & certification",
+    detail: "Shared language, roles, and rhythms for the people already willing to help.",
+  },
+  {
+    title: "Programs & curricula",
+    detail: "Evidence-informed tools for youth, caregivers, and community leaders.",
+  },
+  {
+    title: "SOP & resource library",
+    detail: "Practical playbooks so communities are not inventing process from scratch.",
+  },
+  {
+    title: "Data & evaluation",
+    detail: "Simple ways to track what matters and learn together over time.",
+  },
+  {
+    title: "Partnership support",
+    detail: "Guidance for engaging schools, congregations, agencies, and coalitions.",
+  },
+  {
+    title: "Ongoing technical assistance",
+    detail: "Continued support so the model stays usable after launch day.",
+  },
+];
+
+const contexts = [
+  {
+    title: "Rural county",
+    detail: "Mobilize local assets across towns and long distances.",
+  },
+  {
+    title: "Urban neighborhood",
+    detail: "Connect people and resources where density and need already meet.",
+  },
+  {
+    title: "Faith-centered coalition",
+    detail:
+      "Unite congregations and agencies around shared values—without limiting the model to one tradition.",
+  },
+];
+
+function ShiftIconSlot({ src }: { src?: string }) {
+  if (src) {
+    return (
+      // Icons will be static assets in /public once provided.
+      // eslint-disable-next-line @next/next/no-img-element
+      <img src={src} alt="" className="size-8 object-contain" aria-hidden />
+    );
+  }
+
+  return (
+    <span
+      className="inline-flex size-8 shrink-0 rounded-md border border-dashed border-navy/15 bg-ivory-deep/50"
+      aria-hidden
+    />
+  );
+}
 
 export default function TheModelPage() {
   return (
     <div className="atmosphere relative overflow-hidden">
       <div className="network-fade absolute inset-0" aria-hidden />
 
+      {/* 1. Hero — text only */}
       <section className="relative mx-auto max-w-6xl px-5 pt-16 pb-12 sm:px-8 sm:pt-24 sm:pb-16">
+        <BrandDots className="absolute top-20 left-5 hidden lg:flex" />
         <p className="animate-rise mb-5 text-xs font-semibold tracking-[0.2em] text-forest uppercase">
-          The model behind the movement
+          The Village360 Model
         </p>
         <h1 className="animate-rise font-display max-w-3xl text-4xl leading-[1.12] font-medium tracking-tight text-navy sm:text-5xl lg:text-[3.35rem]">
-          A movement needs more than momentum.{" "}
-          <span className="text-forest">It needs a way to work.</span>
+          Good people are already showing up.
         </h1>
-        <p className="animate-rise-delay mt-6 max-w-2xl text-lg leading-relaxed text-ink-muted sm:text-xl">
-          The Village360 Model turns shared concern into collaborative local
-          action—aligning people, programs, relationships, and infrastructure
-          around families.
+        <p className="animate-rise-delay mt-3 max-w-2xl font-display text-xl leading-snug text-forest sm:text-2xl">
+          We help them work together.
         </p>
-        <div className="animate-rise-late mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
-          <Link
-            href="/launch-a-village"
-            className="inline-flex items-center justify-center rounded-md bg-forest px-5 py-3 text-base font-medium text-ivory transition-colors hover:bg-forest-deep"
-          >
-            What a launch includes
-          </Link>
-          <Link
-            href="/bring-village360-here"
-            className="inline-flex items-center justify-center rounded-md border border-navy/20 bg-ivory/60 px-5 py-3 text-base font-medium text-navy transition-colors hover:border-forest/40 hover:bg-ivory"
-          >
-            Bring Village360 Here
-          </Link>
+        <p className="animate-rise-delay mt-6 max-w-2xl text-lg leading-relaxed text-ink-muted sm:text-xl">
+          The Village360 Model is a teachable way for communities to support
+          families before crisis—with structure, tools, and relationships. Local
+          leaders keep ownership. Village360 provides the template and training;
+          it does not become the community&apos;s caseworker or care hub.
+        </p>
+      </section>
+
+      {/* 2. Without / with the model */}
+      <section className="relative border-t border-navy/8 bg-ivory">
+        <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
+          <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-12">
+            <div className="lg:col-span-4">
+              <h2 className="font-display text-3xl text-navy sm:text-4xl">
+                The Village360 Model—not another standalone program.
+              </h2>
+              <p className="mt-4 text-base leading-relaxed text-ink-muted sm:text-lg">
+                The model helps communities weave people, collaboration, and
+                systems together—so families are supported before crisis, instead
+                of navigating disconnected helpers alone.
+              </p>
+            </div>
+
+            <figure className="lg:col-span-8">
+              <div className="mb-4 grid grid-cols-2 gap-4 sm:gap-8">
+                <div className="text-center sm:text-left">
+                  <p className="text-xs font-semibold tracking-[0.14em] text-navy uppercase">
+                    Without a system
+                  </p>
+                  <p className="mt-1 text-sm text-ink-muted">
+                    Disconnected programs. Missed opportunities.
+                  </p>
+                </div>
+                <div className="text-center sm:text-left">
+                  <p className="text-xs font-semibold tracking-[0.14em] text-forest uppercase">
+                    With the Village360 Model
+                  </p>
+                  <p className="mt-1 text-sm text-ink-muted">
+                    One connected system. Stronger families.
+                  </p>
+                </div>
+              </div>
+              <Image
+                src="/community-os.png"
+                alt="Comparison showing community partners disconnected around a family without a system, then connected around the family with the Village360 Model"
+                width={1600}
+                height={800}
+                className="h-auto w-full object-contain"
+                sizes="(min-width: 1024px) 40rem, 100vw"
+              />
+              <figcaption className="sr-only">
+                Without a system, schools, faith communities, nonprofits, local
+                leaders, health providers, and courts sit around the family with
+                weak connections. With the Village360 Model, those same partners
+                form a connected village around the family.
+              </figcaption>
+            </figure>
+          </div>
         </div>
       </section>
 
+      {/* 3. Movement vs model */}
       <section className="relative border-y border-navy/8 bg-ivory-deep/50">
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
           <p className="mb-3 text-xs font-semibold tracking-[0.18em] text-forest uppercase">
@@ -104,19 +227,17 @@ export default function TheModelPage() {
               <h3 className="font-display text-xl text-navy">The movement</h3>
               <p className="mt-4 text-base leading-relaxed text-ink-muted">
                 Village360 is a growing movement of communities choosing
-                collaborative, relationship-centered support before families reach
-                crisis. It is a shared conviction: the foster care crisis cannot
-                be answered by the foster care system alone.
+                collaborative, relationship-centered support before families
+                reach crisis. You can belong—raise awareness, volunteer,
+                partner—without launching a local Village.
               </p>
             </div>
             <div>
               <h3 className="font-display text-xl text-forest">The model</h3>
               <p className="mt-4 text-base leading-relaxed text-ink-muted">
-                The Village360 Model is how communities put that conviction into
-                practice. Local villages keep ownership. Village360 provides
-                training, tools, and shared principles so compassion becomes
-                collaborative, sustainable action—without reinventing care from
-                scratch.
+                The Village360 Model is how a community puts that conviction into
+                practice. Adopting the model means using a shared template—not
+                hiring Village360 to run care inside your town.
               </p>
             </div>
           </div>
@@ -127,36 +248,19 @@ export default function TheModelPage() {
         </div>
       </section>
 
-      <section className="relative mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
-        <p className="mb-3 text-xs font-semibold tracking-[0.18em] text-forest uppercase">
-          How communities put the movement into practice
-        </p>
-        <h2 className="font-display max-w-2xl text-3xl text-navy sm:text-4xl">
-          Four stages. One collaborative village.
-        </h2>
-        <ol className="mt-12 grid gap-8 sm:grid-cols-2">
-          {stages.map((stage, index) => (
-            <li key={stage.name}>
-              <span className="text-xs font-semibold tracking-[0.16em] text-forest/70 uppercase">
-                {String(index + 1).padStart(2, "0")}
-              </span>
-              <h3 className="mt-2 font-display text-xl text-navy">{stage.name}</h3>
-              <p className="mt-2 text-base leading-relaxed text-ink-muted">
-                {stage.detail}
-              </p>
-            </li>
-          ))}
-        </ol>
-      </section>
-
-      <section className="relative border-y border-navy/8 bg-navy text-ivory">
+      {/* 3. Three layers */}
+      <section className="relative border-b border-navy/8 bg-navy text-ivory">
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
           <p className="mb-3 text-xs font-semibold tracking-[0.18em] text-mist/80 uppercase">
-            Three layers
+            Three layers of the village
           </p>
           <h2 className="font-display max-w-2xl text-3xl sm:text-4xl">
-            People, programs, and the quiet infrastructure that holds them.
+            People, collaboration, and infrastructure.
           </h2>
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-ivory/70">
+            A strong village aligns the people who care, the ways they
+            collaborate, and the quiet systems that make impact sustainable.
+          </p>
           <ul className="mt-12 grid gap-8 sm:grid-cols-3">
             {layers.map((layer) => (
               <li key={layer.name}>
@@ -170,63 +274,168 @@ export default function TheModelPage() {
         </div>
       </section>
 
+      {/* 4. Changes you can expect — table ready for icons */}
+      <section className="relative mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="mb-3 text-xs font-semibold tracking-[0.18em] text-forest uppercase">
+            Before and after
+          </p>
+          <h2 className="font-display text-3xl text-navy sm:text-4xl">
+            Changes you can expect
+          </h2>
+          <p className="mt-4 text-base leading-relaxed text-ink-muted">
+            Not because Village360 arrives to do the work—but because the model
+            helps a community work as one village.
+          </p>
+        </div>
+
+        <div className="mt-12 overflow-x-auto">
+          <table className="w-full min-w-[36rem] border-collapse text-left">
+            <thead>
+              <tr className="border-b border-navy/15">
+                <th
+                  scope="col"
+                  className="py-4 pr-4 text-xs font-semibold tracking-[0.14em] text-ink-muted uppercase"
+                >
+                  Before the Village360 Model
+                </th>
+                <th
+                  scope="col"
+                  className="py-4 pl-4 text-xs font-semibold tracking-[0.14em] text-forest uppercase"
+                >
+                  With the Village360 Model
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {shifts.map((row) => (
+                <tr key={row.id} className="border-b border-navy/10">
+                  <td className="py-5 pr-4 align-middle">
+                    <div className="flex items-center gap-3">
+                      <ShiftIconSlot src={row.beforeIcon} />
+                      <span className="text-base text-ink-muted">
+                        {row.before}
+                      </span>
+                    </div>
+                  </td>
+                  <td className="py-5 pl-4 align-middle">
+                    <div className="flex items-center gap-3">
+                      <ShiftIconSlot src={row.afterIcon} />
+                      <span className="text-base font-medium text-navy">
+                        {row.after}
+                      </span>
+                    </div>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      {/* 5. What the model provides */}
+      <section className="relative border-y border-navy/8 bg-ivory-deep/50">
+        <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
+          <p className="mb-3 text-xs font-semibold tracking-[0.18em] text-forest uppercase">
+            In the box
+          </p>
+          <h2 className="font-display max-w-2xl text-3xl text-navy sm:text-4xl">
+            What the Village360 Model provides
+          </h2>
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink-muted">
+            Training, tools, and support so communities can implement the model
+            with integrity—without reinventing every system from scratch.
+          </p>
+          <ul className="mt-12 grid gap-8 sm:grid-cols-2">
+            {provides.map((item) => (
+              <li key={item.title}>
+                <h3 className="font-display text-lg text-navy">{item.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-ink-muted sm:text-base">
+                  {item.detail}
+                </p>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-10 max-w-2xl border-t border-navy/10 pt-8 text-sm leading-relaxed text-ink-muted">
+            <span className="font-medium text-navy">Also available if needed:</span>{" "}
+            a branding guide, website, and social media launch support.
+          </p>
+        </div>
+      </section>
+
+      {/* 6. Adapt */}
       <section className="relative mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
         <p className="mb-3 text-xs font-semibold tracking-[0.18em] text-forest uppercase">
-          What changes
+          Local expression
         </p>
         <h2 className="font-display max-w-2xl text-3xl text-navy sm:text-4xl">
-          From scattered care to a village that can act together.
+          Designed to adapt without losing its integrity.
         </h2>
-        <ul className="mt-10 max-w-2xl divide-y divide-navy/10 border-y border-navy/10">
-          {shifts.map((item) => (
-            <li
-              key={item.from}
-              className="grid gap-1 py-4 sm:grid-cols-2 sm:gap-8"
-            >
-              <span className="text-base text-ink-muted">{item.from}</span>
-              <span className="text-base text-navy">{item.to}</span>
+        <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink-muted">
+          The framework stays consistent. The local village makes it its own.
+        </p>
+        <ul className="mt-12 grid gap-10 sm:grid-cols-3">
+          {contexts.map((item) => (
+            <li key={item.title}>
+              <h3 className="font-display text-xl text-navy">{item.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-ink-muted sm:text-base">
+                {item.detail}
+              </p>
             </li>
           ))}
         </ul>
-        <p className="mt-8 max-w-2xl text-sm leading-relaxed text-ink-muted">
-          We will not decorate this page with sample dashboards or invented
-          outcome numbers. Measurement belongs here as a practice—see{" "}
-          <Link href="/impact" className="text-forest hover:text-forest-deep">
-            Impact
-          </Link>{" "}
-          for how we intend to learn honestly.
-        </p>
       </section>
 
-      <section className="relative border-t border-navy/8 bg-ivory-deep/40">
-        <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
-          <h2 className="font-display max-w-2xl text-3xl text-navy sm:text-4xl">
-            Ready to see what a local launch involves?
+      {/* 7. Accountability — soft link */}
+      <section className="relative border-y border-navy/8 bg-ivory-deep/40">
+        <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 sm:py-16">
+          <h2 className="font-display max-w-2xl text-2xl text-navy sm:text-3xl">
+            Accountability is part of the model.
           </h2>
-          <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink-muted sm:text-lg">
-            Learn what Village360 brings and what your community keeps—then
-            begin a readiness conversation. You do not need a finished village.
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink-muted">
+            We track what matters together so communities can improve what they
+            do—and stay honest about what they are still learning. For how we
+            intend to measure, see{" "}
+            <Link
+              href="/impact"
+              className="font-medium text-forest underline-offset-2 hover:underline"
+            >
+              Impact
+            </Link>
+            .
           </p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <Link
-              href="/launch-a-village"
-              className="inline-flex items-center justify-center rounded-md bg-forest px-5 py-3 text-base font-medium text-ivory transition-colors hover:bg-forest-deep"
-            >
-              Launch a Village
-            </Link>
-            <Link
-              href="/bring-village360-here"
-              className="inline-flex items-center justify-center rounded-md border border-navy/20 px-5 py-3 text-base font-medium text-navy transition-colors hover:border-forest/40"
-            >
-              Begin a readiness conversation
-            </Link>
-            <a
-              href={KIT_PDF_HREF}
-              className="inline-flex items-center justify-center px-2 py-3 text-base text-ink-muted underline-offset-4 transition-colors hover:text-forest hover:underline sm:ml-1"
-            >
-              Download the Mini Village Kit
-            </a>
-          </div>
+        </div>
+      </section>
+
+      {/* 8. CTA */}
+      <section className="relative mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
+        <h2 className="font-display max-w-2xl text-3xl text-navy sm:text-4xl">
+          Ready to see what a local launch involves?
+        </h2>
+        <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink-muted sm:text-lg">
+          Learn what adopting the model includes—then begin a readiness
+          conversation. You do not need a finished village.
+        </p>
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <Link
+            href="/launch-a-village"
+            className="inline-flex items-center justify-center rounded-md bg-forest px-5 py-3 text-base font-medium text-ivory transition-colors hover:bg-forest-deep"
+          >
+            Launch a Village
+          </Link>
+          <Link
+            href="/bring-village360-here"
+            className="inline-flex items-center justify-center rounded-md border border-navy/20 px-5 py-3 text-base font-medium text-navy transition-colors hover:border-forest/40"
+          >
+            Begin a readiness conversation
+          </Link>
+          <a
+            href={KIT_PDF_HREF}
+            download
+            className="inline-flex items-center justify-center px-2 py-3 text-base text-ink-muted underline-offset-4 transition-colors hover:text-forest hover:underline sm:ml-1"
+          >
+            Download the Mini Village Kit
+          </a>
         </div>
       </section>
     </div>

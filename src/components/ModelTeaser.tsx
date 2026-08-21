@@ -6,21 +6,25 @@ const stages = [
     name: "Listen & Assess",
     detail:
       "Map what already exists. Understand families, partners, and gaps before designing anything new.",
+    timeline: "1–2 months",
   },
   {
     name: "Equip Leaders",
     detail:
       "Train the people already willing to help—shared language, clear roles, sustainable rhythms.",
+    timeline: "2–3 months",
   },
   {
     name: "Connect the Village",
     detail:
       "Collaborate on practical, emotional, and relational support so families are not handed between disconnected helpers.",
+    timeline: "3–6 months",
   },
   {
     name: "Measure & Multiply",
     detail:
       "Track what matters, learn out loud, and help the next community begin further along.",
+    timeline: "Ongoing",
   },
 ] as const;
 
@@ -67,6 +71,9 @@ export function ModelTeaser() {
                 </h3>
                 <p className="mt-1 text-xs leading-relaxed text-ink-muted sm:text-sm">
                   {stage.detail}
+                </p>
+                <p className="mt-2 text-xs font-medium text-forest sm:text-sm">
+                  Timeline: {stage.timeline}
                 </p>
               </li>
             ))}
