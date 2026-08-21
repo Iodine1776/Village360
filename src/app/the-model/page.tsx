@@ -69,36 +69,52 @@ const shifts = [
 
 const provides = [
   {
-    title: "Community assessment",
-    detail: "Map what already exists—families, partners, gaps, and capacity.",
+    title: "Community Assessment",
+    detail:
+      "Data and listening that reveal local strengths, needs, and opportunities.",
+    icon: "/provides/mglass.svg",
   },
   {
-    title: "Launch strategy",
-    detail: "A clear path from readiness to a local village that can sustain itself.",
+    title: "Launch Strategy",
+    detail:
+      "A tailored plan to align leaders, define priorities, and set the village in motion.",
+    icon: "/provides/flag.svg",
   },
   {
-    title: "Training & certification",
-    detail: "Shared language, roles, and rhythms for the people already willing to help.",
+    title: "Training & Certification",
+    detail:
+      "Build capacity through leader development, coaching, and certification pathways.",
+    icon: "/provides/train.svg",
   },
   {
-    title: "Programs & curricula",
-    detail: "Evidence-informed tools for youth, caregivers, and community leaders.",
+    title: "Programs & Curricula",
+    detail:
+      "Evidence-informed programs for youth, caregivers, and practical community support.",
+    icon: "/provides/program.svg",
   },
   {
-    title: "SOP & resource library",
-    detail: "Practical playbooks so communities are not inventing process from scratch.",
+    title: "SOP & Resource Library",
+    detail:
+      "Standard operating procedures and tools to support consistent, quality work.",
+    icon: "/provides/sop.svg",
   },
   {
-    title: "Data & evaluation",
-    detail: "Simple ways to track what matters and learn together over time.",
+    title: "Data & Evaluation",
+    detail:
+      "Data systems and dashboards to track outcomes and drive continuous improvement.",
+    icon: "/provides/data.svg",
   },
   {
-    title: "Partnership support",
-    detail: "Guidance for engaging schools, congregations, agencies, and coalitions.",
+    title: "Partnership Support",
+    detail:
+      "Guidance to engage partners, clarify roles, and strengthen collaboration.",
+    icon: "/provides/partner.svg",
   },
   {
-    title: "Ongoing technical assistance",
-    detail: "Continued support so the model stays usable after launch day.",
+    title: "Ongoing Technical Assistance",
+    detail:
+      "Coaching and support to adapt, solve challenges, and sustain momentum over time.",
+    icon: "/provides/tech.svg",
   },
 ];
 
@@ -213,7 +229,43 @@ export default function TheModelPage() {
         </div>
       </section>
 
-      {/* 3. Movement vs model */}
+      {/* 3. What Village360 provides */}
+      <section className="relative border-t border-navy/8 bg-ivory">
+        <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
+          <h2 className="font-display text-center text-3xl text-navy sm:text-4xl">
+            What Village360 Provides
+          </h2>
+          <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {provides.map((item) => (
+              <li
+                key={item.title}
+                className="rounded-xl border border-navy/8 bg-ivory px-5 py-8 text-center shadow-[0_1px_0_rgba(27,42,65,0.04)]"
+              >
+                <Image
+                  src={item.icon}
+                  alt=""
+                  width={88}
+                  height={88}
+                  className="mx-auto h-16 w-16 object-contain sm:h-20 sm:w-20"
+                  aria-hidden
+                />
+                <h3 className="font-display mt-5 text-lg text-navy">
+                  {item.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-ink-muted">
+                  {item.detail}
+                </p>
+              </li>
+            ))}
+          </ul>
+          <p className="mx-auto mt-10 max-w-2xl text-center text-sm leading-relaxed text-ink-muted">
+            <span className="font-medium text-navy">Also available if needed:</span>{" "}
+            a branding guide, website, and social media launch support.
+          </p>
+        </div>
+      </section>
+
+      {/* 4. Movement vs model */}
       <section className="relative border-y border-navy/8 bg-ivory-deep/50">
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
           <p className="mb-3 text-xs font-semibold tracking-[0.18em] text-forest uppercase">
@@ -248,7 +300,7 @@ export default function TheModelPage() {
         </div>
       </section>
 
-      {/* 3. Three layers */}
+      {/* 5. Three layers */}
       <section className="relative border-b border-navy/8 bg-navy text-ivory">
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
           <p className="mb-3 text-xs font-semibold tracking-[0.18em] text-mist/80 uppercase">
@@ -274,7 +326,7 @@ export default function TheModelPage() {
         </div>
       </section>
 
-      {/* 4. Changes you can expect — table ready for icons */}
+      {/* 6. Changes you can expect — table ready for icons */}
       <section className="relative mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
         <div className="mx-auto max-w-3xl text-center">
           <p className="mb-3 text-xs font-semibold tracking-[0.18em] text-forest uppercase">
@@ -333,37 +385,7 @@ export default function TheModelPage() {
         </div>
       </section>
 
-      {/* 5. What the model provides */}
-      <section className="relative border-y border-navy/8 bg-ivory-deep/50">
-        <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
-          <p className="mb-3 text-xs font-semibold tracking-[0.18em] text-forest uppercase">
-            In the box
-          </p>
-          <h2 className="font-display max-w-2xl text-3xl text-navy sm:text-4xl">
-            What the Village360 Model provides
-          </h2>
-          <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink-muted">
-            Training, tools, and support so communities can implement the model
-            with integrity—without reinventing every system from scratch.
-          </p>
-          <ul className="mt-12 grid gap-8 sm:grid-cols-2">
-            {provides.map((item) => (
-              <li key={item.title}>
-                <h3 className="font-display text-lg text-navy">{item.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-ink-muted sm:text-base">
-                  {item.detail}
-                </p>
-              </li>
-            ))}
-          </ul>
-          <p className="mt-10 max-w-2xl border-t border-navy/10 pt-8 text-sm leading-relaxed text-ink-muted">
-            <span className="font-medium text-navy">Also available if needed:</span>{" "}
-            a branding guide, website, and social media launch support.
-          </p>
-        </div>
-      </section>
-
-      {/* 6. Adapt */}
+      {/* 7. Adapt */}
       <section className="relative mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
         <p className="mb-3 text-xs font-semibold tracking-[0.18em] text-forest uppercase">
           Local expression
@@ -386,7 +408,7 @@ export default function TheModelPage() {
         </ul>
       </section>
 
-      {/* 7. Accountability — soft link */}
+      {/* 8. Accountability — soft link */}
       <section className="relative border-y border-navy/8 bg-ivory-deep/40">
         <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 sm:py-16">
           <h2 className="font-display max-w-2xl text-2xl text-navy sm:text-3xl">
@@ -407,7 +429,7 @@ export default function TheModelPage() {
         </div>
       </section>
 
-      {/* 8. CTA */}
+      {/* 9. CTA */}
       <section className="relative mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
         <h2 className="font-display max-w-2xl text-3xl text-navy sm:text-4xl">
           Ready to see what a local launch involves?
