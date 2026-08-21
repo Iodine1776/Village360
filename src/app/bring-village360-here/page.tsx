@@ -31,7 +31,7 @@ const startingPoints = [
   },
   {
     name: "Collaborative pathway",
-    body: "Connect youth, caregiver, or workforce supports so families are not navigating silos alone.",
+    body: "Connect youth, caregiver, and community supports so families are not navigating silos alone.",
   },
   {
     name: "Full village launch",

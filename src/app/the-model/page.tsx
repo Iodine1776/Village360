@@ -213,7 +213,42 @@ export default function TheModelPage() {
         </p>
       </section>
 
-      {/* 2. Without / with the model */}
+      {/* 2. Movement vs model */}
+      <section className="relative border-y border-navy/8 bg-ivory-deep/50">
+        <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
+          <p className="mb-3 text-xs font-semibold tracking-[0.18em] text-forest uppercase">
+            Movement and model
+          </p>
+          <h2 className="font-display max-w-2xl text-3xl text-navy sm:text-4xl">
+            Belonging opens the door. Structure makes the work possible.
+          </h2>
+          <div className="mt-12 grid gap-12 lg:grid-cols-2 lg:gap-16">
+            <div>
+              <h3 className="font-display text-xl text-navy">The movement</h3>
+              <p className="mt-4 text-base leading-relaxed text-ink-muted">
+                Village360 is a growing movement of communities choosing
+                collaborative, relationship-centered support before families
+                reach crisis. You can belong—raise awareness, volunteer,
+                partner—without launching a local Village.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-display text-xl text-forest">The model</h3>
+              <p className="mt-4 text-base leading-relaxed text-ink-muted">
+                The Village360 Model is how a community puts that conviction into
+                practice. Adopting the model means using a shared template—not
+                hiring Village360 to run care inside your town.
+              </p>
+            </div>
+          </div>
+          <p className="mt-10 max-w-2xl font-display text-xl leading-snug text-navy sm:text-2xl">
+            The movement can spread widely because the model can be implemented
+            locally.
+          </p>
+        </div>
+      </section>
+
+      {/* 3. Without / with the model */}
       <section className="relative border-t border-navy/8 bg-ivory">
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
           <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-12">
@@ -266,7 +301,7 @@ export default function TheModelPage() {
         </div>
       </section>
 
-      {/* 3. Three layers of the village */}
+      {/* 4. Three layers of the village */}
       <section className="relative border-t border-navy/8 bg-ivory-deep/40">
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
           <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-8">
@@ -313,7 +348,7 @@ export default function TheModelPage() {
         </div>
       </section>
 
-      {/* 4. What Village360 provides */}
+      {/* 5. What Village360 provides */}
       <section className="relative border-t border-navy/8 bg-ivory">
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
           <h2 className="font-display text-center text-3xl text-navy sm:text-4xl">
@@ -345,41 +380,6 @@ export default function TheModelPage() {
           <p className="mx-auto mt-10 max-w-2xl text-center text-sm leading-relaxed text-ink-muted">
             <span className="font-medium text-navy">Also available if needed:</span>{" "}
             a branding guide, website, and social media launch support.
-          </p>
-        </div>
-      </section>
-
-      {/* 5. Movement vs model */}
-      <section className="relative border-y border-navy/8 bg-ivory-deep/50">
-        <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
-          <p className="mb-3 text-xs font-semibold tracking-[0.18em] text-forest uppercase">
-            Movement and model
-          </p>
-          <h2 className="font-display max-w-2xl text-3xl text-navy sm:text-4xl">
-            Belonging opens the door. Structure makes the work possible.
-          </h2>
-          <div className="mt-12 grid gap-12 lg:grid-cols-2 lg:gap-16">
-            <div>
-              <h3 className="font-display text-xl text-navy">The movement</h3>
-              <p className="mt-4 text-base leading-relaxed text-ink-muted">
-                Village360 is a growing movement of communities choosing
-                collaborative, relationship-centered support before families
-                reach crisis. You can belong—raise awareness, volunteer,
-                partner—without launching a local Village.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-display text-xl text-forest">The model</h3>
-              <p className="mt-4 text-base leading-relaxed text-ink-muted">
-                The Village360 Model is how a community puts that conviction into
-                practice. Adopting the model means using a shared template—not
-                hiring Village360 to run care inside your town.
-              </p>
-            </div>
-          </div>
-          <p className="mt-10 max-w-2xl font-display text-xl leading-snug text-navy sm:text-2xl">
-            The movement can spread widely because the model can be implemented
-            locally.
           </p>
         </div>
       </section>
@@ -503,7 +503,7 @@ export default function TheModelPage() {
 
           <figure className="mt-10">
             <Image
-              src="/accountability.png"
+              src="/accountability.jpg"
               alt="Illustrative outcomes dashboard example showing sample participation, completion, connections, protective factors, caregiver confidence, and partner engagement metrics"
               width={1808}
               height={1024}
