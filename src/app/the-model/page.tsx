@@ -438,13 +438,14 @@ export default function TheModelPage() {
                   key={item.title}
                   className="overflow-hidden rounded-xl border border-navy/8 bg-ivory text-center shadow-[0_1px_0_rgba(27,42,65,0.04)]"
                 >
-                  <div className="relative aspect-[4/3] w-full overflow-hidden">
+                  <div className="relative aspect-[4/3] w-full overflow-hidden bg-ivory-deep">
                     <Image
                       src={item.image}
                       alt={item.alt}
                       fill
-                      className="object-cover"
-                      sizes="(min-width: 1024px) 14rem, (min-width: 640px) 30vw, 100vw"
+                      quality={90}
+                      className="object-cover object-center"
+                      sizes="(min-width: 1024px) 280px, (min-width: 640px) 33vw, 100vw"
                     />
                   </div>
                   <div className="px-4 py-5">
