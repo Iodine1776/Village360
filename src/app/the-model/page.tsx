@@ -138,20 +138,20 @@ const contexts = [
     title: "Rural County",
     detail: "Mobilize local assets across towns and communities.",
     image: "/contexts/country.jpg",
-    alt: "Rolling green and golden hills in open countryside",
+    alt: "Dirt road through golden fields leading to a red barn at sunset",
   },
   {
     title: "Urban Neighborhood",
     detail: "Connect people and resources where needs are greatest.",
     image: "/contexts/city.jpg",
-    alt: "City street with buildings and trees",
+    alt: "Modern city plaza and streetscape at golden hour",
   },
   {
     title: "Faith-Centered Coalition",
     detail:
       "Unite congregations and agencies around shared values and action.",
     image: "/contexts/faith.jpg",
-    alt: "White church building with a steeple",
+    alt: "Faith community campus and gardens at sunset",
   },
 ];
 
