@@ -126,17 +126,23 @@ const provides = [
 
 const contexts = [
   {
-    title: "Rural county",
-    detail: "Mobilize local assets across towns and long distances.",
+    title: "Rural County",
+    detail: "Mobilize local assets across towns and communities.",
+    image: "/contexts/country.jpg",
+    alt: "Rolling green and golden hills in open countryside",
   },
   {
-    title: "Urban neighborhood",
-    detail: "Connect people and resources where density and need already meet.",
+    title: "Urban Neighborhood",
+    detail: "Connect people and resources where needs are greatest.",
+    image: "/contexts/city.jpg",
+    alt: "City street with buildings and trees",
   },
   {
-    title: "Faith-centered coalition",
+    title: "Faith-Centered Coalition",
     detail:
-      "Unite congregations and agencies around shared values—without limiting the model to one tradition.",
+      "Unite congregations and agencies around shared values and action.",
+    image: "/contexts/faith.jpg",
+    alt: "White church building with a steeple",
   },
 ];
 
@@ -413,26 +419,47 @@ export default function TheModelPage() {
       </section>
 
       {/* 7. Adapt */}
-      <section className="relative mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
-        <p className="mb-3 text-xs font-semibold tracking-[0.18em] text-forest uppercase">
-          Local expression
-        </p>
-        <h2 className="font-display max-w-2xl text-3xl text-navy sm:text-4xl">
-          Designed to adapt without losing its integrity.
-        </h2>
-        <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink-muted">
-          The framework stays consistent. The local village makes it its own.
-        </p>
-        <ul className="mt-12 grid gap-10 sm:grid-cols-3">
-          {contexts.map((item) => (
-            <li key={item.title}>
-              <h3 className="font-display text-xl text-navy">{item.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-ink-muted sm:text-base">
-                {item.detail}
+      <section className="relative border-t border-navy/8 bg-ivory">
+        <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
+          <div className="grid items-start gap-10 lg:grid-cols-12 lg:gap-12">
+            <div className="lg:col-span-4 lg:pt-2">
+              <h2 className="font-display text-3xl text-navy sm:text-4xl">
+                Designed to Adapt Without Losing Its Integrity
+              </h2>
+              <p className="mt-4 text-base leading-relaxed text-ink-muted sm:text-lg">
+                The framework stays consistent. The local village makes it its
+                own.
               </p>
-            </li>
-          ))}
-        </ul>
+            </div>
+
+            <ul className="grid gap-5 sm:grid-cols-3 lg:col-span-8">
+              {contexts.map((item) => (
+                <li
+                  key={item.title}
+                  className="overflow-hidden rounded-xl border border-navy/8 bg-ivory text-center shadow-[0_1px_0_rgba(27,42,65,0.04)]"
+                >
+                  <div className="relative aspect-[4/3] w-full overflow-hidden">
+                    <Image
+                      src={item.image}
+                      alt={item.alt}
+                      fill
+                      className="object-cover"
+                      sizes="(min-width: 1024px) 14rem, (min-width: 640px) 30vw, 100vw"
+                    />
+                  </div>
+                  <div className="px-4 py-5">
+                    <h3 className="font-display text-lg text-navy">
+                      {item.title}
+                    </h3>
+                    <p className="mt-2 text-sm leading-relaxed text-ink-muted">
+                      {item.detail}
+                    </p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </section>
 
       {/* 8. Accountability — soft link */}
