@@ -488,24 +488,43 @@ export default function TheModelPage() {
         </div>
       </section>
 
-      {/* 8. Accountability — soft link */}
+      {/* 8. Accountability */}
       <section className="relative border-y border-navy/8 bg-ivory-deep/40">
-        <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 sm:py-16">
-          <h2 className="font-display max-w-2xl text-2xl text-navy sm:text-3xl">
-            Accountability is part of the model.
-          </h2>
-          <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink-muted">
-            We track what matters together so communities can improve what they
-            do—and stay honest about what they are still learning. For how we
-            intend to measure, see{" "}
-            <Link
-              href="/impact"
-              className="font-medium text-forest underline-offset-2 hover:underline"
-            >
-              Impact
-            </Link>
-            .
-          </p>
+        <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
+          <div className="max-w-2xl">
+            <h2 className="font-display text-3xl text-navy sm:text-4xl">
+              Accountability is part of the model.
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-ink-muted sm:text-lg">
+              We track what matters together so communities can improve what
+              they do—and stay honest about what they are still learning.
+            </p>
+          </div>
+
+          <figure className="mt-10">
+            <Image
+              src="/accountability.png"
+              alt="Illustrative outcomes dashboard example showing sample participation, completion, connections, protective factors, caregiver confidence, and partner engagement metrics"
+              width={1808}
+              height={1024}
+              className="h-auto w-full object-contain"
+              sizes="(min-width: 1024px) 72rem, 100vw"
+              quality={90}
+            />
+            <figcaption className="mt-4 max-w-3xl text-sm leading-relaxed text-ink-muted">
+              <span className="font-medium text-navy">Illustrative example only.</span>{" "}
+              These figures are sample metrics that show how a village might
+              learn over time—not Village360 results or live performance data.
+              For how we intend to measure honestly, see{" "}
+              <Link
+                href="/impact"
+                className="font-medium text-forest underline-offset-2 hover:underline"
+              >
+                Impact
+              </Link>
+              .
+            </figcaption>
+          </figure>
         </div>
       </section>
 
