@@ -34,42 +34,51 @@ const layers = [
   },
 ];
 
-/** Icon paths optional until assets land in /public. */
 const shifts = [
   {
     id: "strategy",
     before: "Isolated efforts",
+    beforeDetail: "Programs and people work in silos.",
     after: "Shared strategy",
-    beforeIcon: undefined as string | undefined,
-    afterIcon: undefined as string | undefined,
+    afterDetail: "Aligned priorities and collaborative action.",
+    beforeIcon: "/changes/isolated-efforts.svg",
+    afterIcon: "/changes/shared-strategy.svg",
   },
   {
     id: "timing",
     before: "Crisis response",
+    beforeDetail: "Support begins after problems escalate.",
     after: "Earlier support",
-    beforeIcon: undefined as string | undefined,
-    afterIcon: undefined as string | undefined,
+    afterDetail: "Families get help before crisis points.",
+    beforeIcon: "/changes/crisis-response.svg",
+    afterIcon: "/changes/earlier-support.svg",
   },
   {
     id: "roles",
     before: "Unclear roles",
+    beforeDetail: "Duplication, gaps, and confusion.",
     after: "Defined responsibilities",
-    beforeIcon: undefined as string | undefined,
-    afterIcon: undefined as string | undefined,
+    afterDetail: "Clear roles and trusted relationships.",
+    beforeIcon: "/changes/unclear-roles.svg",
+    afterIcon: "/changes/defined-responsibilities.svg",
   },
   {
     id: "continuity",
     before: "Inconsistent follow-through",
+    beforeDetail: "Families fall through the cracks.",
     after: "Relational continuity",
-    beforeIcon: undefined as string | undefined,
-    afterIcon: undefined as string | undefined,
+    afterDetail: "Families have a consistent circle of support.",
+    beforeIcon: "/changes/inconsistent-follow-through.svg",
+    afterIcon: "/changes/relational-continuity.svg",
   },
   {
     id: "outcomes",
     before: "Activity counts",
+    beforeDetail: "Outputs measured, outcomes unclear.",
     after: "Measurable outcomes",
-    beforeIcon: undefined as string | undefined,
-    afterIcon: undefined as string | undefined,
+    afterDetail: "Data shows what works and for whom.",
+    beforeIcon: "/changes/activity-counts.svg",
+    afterIcon: "/changes/measurable-outcomes.svg",
   },
 ];
 
@@ -146,20 +155,36 @@ const contexts = [
   },
 ];
 
-function ShiftIconSlot({ src }: { src?: string }) {
-  if (src) {
-    return (
-      // Icons will be static assets in /public once provided.
-      // eslint-disable-next-line @next/next/no-img-element
-      <img src={src} alt="" className="size-8 object-contain" aria-hidden />
-    );
-  }
-
+function ShiftCell({
+  icon,
+  title,
+  detail,
+  emphasize = false,
+}: {
+  icon: string;
+  title: string;
+  detail: string;
+  emphasize?: boolean;
+}) {
   return (
-    <span
-      className="inline-flex size-8 shrink-0 rounded-md border border-dashed border-navy/15 bg-ivory-deep/50"
-      aria-hidden
-    />
+    <div className="flex items-start gap-3">
+      <Image
+        src={icon}
+        alt=""
+        width={40}
+        height={40}
+        className="mt-0.5 size-9 shrink-0 object-contain sm:size-10"
+        aria-hidden
+      />
+      <div>
+        <p
+          className={`text-base ${emphasize ? "font-semibold text-navy" : "font-medium text-ink-muted"}`}
+        >
+          {title}
+        </p>
+        <p className="mt-0.5 text-sm leading-relaxed text-ink-muted">{detail}</p>
+      </div>
+    </div>
   );
 }
 
@@ -359,62 +384,62 @@ export default function TheModelPage() {
         </div>
       </section>
 
-      {/* 6. Changes you can expect — table ready for icons */}
-      <section className="relative mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="mb-3 text-xs font-semibold tracking-[0.18em] text-forest uppercase">
-            Before and after
-          </p>
-          <h2 className="font-display text-3xl text-navy sm:text-4xl">
-            Changes you can expect
-          </h2>
-          <p className="mt-4 text-base leading-relaxed text-ink-muted">
-            Not because Village360 arrives to do the work—but because the model
-            helps a community work as one village.
-          </p>
-        </div>
+      {/* 6. Changes you can expect */}
+      <section className="relative border-t border-navy/8 bg-ivory">
+        <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
+          <div className="grid items-start gap-10 lg:grid-cols-12 lg:gap-12">
+            <div className="lg:col-span-3 lg:pt-2">
+              <h2 className="font-display text-3xl text-navy sm:text-4xl">
+                Changes you can expect
+              </h2>
+              <p className="mt-4 text-base leading-relaxed text-ink-muted">
+                Not because Village360 arrives to do the work—but because the
+                model helps a community work as one village.
+              </p>
+            </div>
 
-        <div className="mt-12 overflow-x-auto">
-          <table className="w-full min-w-[36rem] border-collapse text-left">
-            <thead>
-              <tr className="border-b border-navy/15">
-                <th
-                  scope="col"
-                  className="py-4 pr-4 text-xs font-semibold tracking-[0.14em] text-ink-muted uppercase"
-                >
-                  Before the Village360 Model
-                </th>
-                <th
-                  scope="col"
-                  className="py-4 pl-4 text-xs font-semibold tracking-[0.14em] text-forest uppercase"
-                >
-                  With the Village360 Model
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {shifts.map((row) => (
-                <tr key={row.id} className="border-b border-navy/10">
-                  <td className="py-5 pr-4 align-middle">
-                    <div className="flex items-center gap-3">
-                      <ShiftIconSlot src={row.beforeIcon} />
-                      <span className="text-base text-ink-muted">
-                        {row.before}
-                      </span>
-                    </div>
-                  </td>
-                  <td className="py-5 pl-4 align-middle">
-                    <div className="flex items-center gap-3">
-                      <ShiftIconSlot src={row.afterIcon} />
-                      <span className="text-base font-medium text-navy">
-                        {row.after}
-                      </span>
-                    </div>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+            <div className="overflow-x-auto lg:col-span-9">
+              <table className="w-full min-w-[40rem] border-collapse text-left">
+                <thead>
+                  <tr>
+                    <th
+                      scope="col"
+                      className="rounded-tl-lg bg-navy/5 px-4 py-3 text-xs font-semibold tracking-[0.14em] text-ink-muted uppercase"
+                    >
+                      Before the Village360 Model
+                    </th>
+                    <th
+                      scope="col"
+                      className="rounded-tr-lg bg-forest/10 px-4 py-3 text-xs font-semibold tracking-[0.14em] text-forest uppercase"
+                    >
+                      With the Village360 Model
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {shifts.map((row) => (
+                    <tr key={row.id} className="border-b border-navy/10">
+                      <td className="border-r border-navy/8 px-4 py-5 align-top">
+                        <ShiftCell
+                          icon={row.beforeIcon}
+                          title={row.before}
+                          detail={row.beforeDetail}
+                        />
+                      </td>
+                      <td className="px-4 py-5 align-top">
+                        <ShiftCell
+                          icon={row.afterIcon}
+                          title={row.after}
+                          detail={row.afterDetail}
+                          emphasize
+                        />
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
       </section>
 
